@@ -1,0 +1,33 @@
+ext {
+    minSdk = 16
+    targetSdk = 22
+    buildToolsVersion = '27.0.2'
+    compileSdkVersion = 27
+
+    // Libraries Version Code
+    supportLibVersion = '27.0.2'
+    support4Version = supportLibVersion
+    appcompat7Version = supportLibVersion
+    recyclerviewVersion = supportLibVersion
+    supportAnnotationsVersion = supportLibVersion
+    designVersion = supportLibVersion
+
+    // Dependencies Libraries
+    dependencies = ["support-v4"                    : "com.android.support:support-v4:" + support4Version,
+                    "recyclerview-v7"               : "com.android.support:recyclerview-v7:" + recyclerviewVersion,
+                    "support-annotations"           : "com.android.support:support-annotations:" + supportAnnotationsVersion,
+                    "appcompat-v7"                  : "com.android.support:appcompat-v7:" + appcompat7Version,
+                    "design"                        : "com.android.support:design:" + appcompat7Version,
+                    "MLog"                          : "com.anbetter:MLog:1.0.1",
+                    "okhttp"                        : "com.squareup.okhttp3:okhttp:3.9.0",
+                    "okhttp-logging"                : "com.squareup.okhttp3:logging-interceptor:3.9.0",
+                    "fresco-helper"                 : "com.facebook.fresco.helper:fresco-helper:2.0.0",
+                    "gson"                          : "com.google.code.gson:gson:2.7",
+                    "rxandroid"                     : "io.reactivex.rxjava2:rxandroid:2.0.1",
+                    "rxjava"                        : "io.reactivex.rxjava2:rxjava:2.1.0",
+                    "smoothprogressbar"             : "com.github.castorflex.smoothprogressbar:library-circular:1.1.0",
+                    "ptr_pullrefresh"               : "com.anbetter:ptr_pullrefresh:1.0.0"
+
+    ]
+
+}

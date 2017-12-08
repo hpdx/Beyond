@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Data loading -->
+    <string name="list_loading">正在加载…</string>
+    <string name="loading">正在努力加载中…</string>
+    <string name="network_retry">重试</string>
+    <string name="network_error">网络未连接，请重试</string>
+    <string name="timeout_error">连接超时。</string>
+    <string name="server_error">服务器故障</string>
+    <string name="parse_error">网络传输出错</string>
+    <string name="network_error_report_hint">网络忙，请稍候再报</string>
+    <string name="auth_required_error">身份验证失败，请重试</string>
+    <string name="bolome_auth_required_error">需要进行身份验证，请重新登录后再重试</string>
+    <string name="error">错误</string>
+    <string name="no_results">暂无记录</string>
+    <string name="no_more_results">没有了...</string>
+    <string name="unknow_error">未知错误</string>
+    <string name="carrier_network_unavailable_error">无法连接到网络，请检查您的网络连接。</string>
+
+</resources>

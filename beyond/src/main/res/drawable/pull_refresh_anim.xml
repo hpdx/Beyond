@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false">
+    <item
+        android:drawable="@drawable/animation_refresh_00_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_01_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_02_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_03_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_04_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_05_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_06_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_07_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_08_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_09_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_10_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_11_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_12_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_13_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_14_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_15_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_16_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_17_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_18_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_19_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_20_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_21_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_22_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+    <item
+        android:drawable="@drawable/animation_refresh_23_"
+        android:duration="@integer/pull_refresh_animation_duration" />
+
+</animation-list>

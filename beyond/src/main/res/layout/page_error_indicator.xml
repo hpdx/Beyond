@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/page_error_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@id/page_error_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_nullpage_nonetwork" />
+
+    <TextView
+        android:id="@id/page_error_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23.0dip"
+        android:gravity="center"
+        android:lineSpacingExtra="9.0dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/no_results"
+        android:textColor="@color/darkgrey"
+        android:textSize="@dimen/font_middle" />
+
+</LinearLayout>

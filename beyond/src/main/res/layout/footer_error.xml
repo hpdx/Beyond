@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/grey_background"
+    android:layout_height="@dimen/list_footer_view_height">
+
+    <LinearLayout
+        android:id="@+id/ll_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_footer_view_height"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/error_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_warning"
+            android:drawablePadding="6.0dip"
+            android:gravity="center"
+            android:paddingRight="10.0dip"
+            android:text="@string/network_error"
+            android:textColor="@color/darkgrey"
+            android:textSize="@dimen/font_middle"/>
+
+        <TextView
+            android:id="@id/retry_button"
+            android:layout_width="68dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_s_grey_highlight"
+            android:gravity="center"
+            android:text="@string/network_retry"
+            android:textColor="@color/btn_text_dark"
+            android:textSize="@dimen/font_middle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        xmlns:wheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_footer_view_height"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.trident.beyond.widgets.ProgressWheel
+            android:id="@+id/loading_progress_bar"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            wheel:matProg_barColor="@color/grey_888cab"
+            wheel:matProg_progressIndeterminate="true"/>
+
+        <TextView
+            android:id="@id/loading_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10.0dip"
+            android:text="@string/list_loading"
+            android:textColor="@color/grey_888cab"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+</FrameLayout>

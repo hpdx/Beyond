@@ -1,0 +1,16 @@
+<resources>
+    <!-- Font size start -->
+    <dimen name="font_xsmall">9.0sp</dimen>
+    <dimen name="font_small">10sp</dimen>
+    <dimen name="font_11_sp">11sp</dimen>
+    <dimen name="font_small_plus">12sp</dimen>
+    <dimen name="font_13_sp">13sp</dimen>
+    <dimen name="font_15_sp">15sp</dimen>
+    <dimen name="font_middle">14sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_xlarge">18sp</dimen>
+    <dimen name="font_xxlarge">20sp</dimen>
+    <dimen name="font_xxxlarge">22sp</dimen>
+    <dimen name="font_super_large">30sp</dimen>
+    <!-- Font size end -->
+</resources>

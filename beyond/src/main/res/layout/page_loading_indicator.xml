@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/loading_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background"
+    android:visibility="gone">
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@id/loading_indicator_progressbar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        app:cpb_color="@color/grey_888cab" />
+</RelativeLayout>

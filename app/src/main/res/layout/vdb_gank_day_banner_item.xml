@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="banner"
+            type="com.gank.day.model.GanKDayBanner"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_background"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_cover"
+            android:layout_width="400dp"
+            android:layout_height="500dp"
+            app:actualImageScaleType="centerCrop"
+            app:url="@{banner.url}"/>
+
+        <!--app:placeholderImage="@drawable/pic_default_b"-->
+        <!--app:placeholderImageScaleType="centerCrop"-->
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dcdcdc</color>
+    <color name="colorPrimaryDark">#bfbfbf</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="_grab_btn_choose_by_user">#FFA1A4</color>
+    <color name="app_background_color">#F9F9F9</color>
+    <color name="white_transparent">#96ffffff</color>
+    <color name="home_tab_background">#40ffffff</color>
+    <!-- 透明度为40%的黑色-->
+    <color name="black_transparent">#66000000</color>
+    <!-- 透明度为60%的黑色-->
+    <color name="black_transparent_60">#99000000</color>
+    <color name="bolo_white_transparent">#e5ffffff</color>
+    <color name="talk_room_bck">#75ffffff</color>
+    <color name="bolo_green_transparent">#80009b74</color>
+    <color name="progress_wheel_circle">#db3838</color>
+    <color name="play_main_background">#fff2f2f2</color>
+    <color name="live_room_background">#eeeeee</color>
+    <color name="pic_default_background">#dcdcdc</color>
+    <color name="live_timeline_background">#dcdcdc</color>
+    <color name="light_yellow">#ffdc36</color>
+    <color name="bolo_pink">#feaaaa</color>
+    <color name="bolo_btn_black">#65657b</color>
+    <color name="bolo_btn_grey">#d2d2d2</color>
+    <color name="btn_dark_grey">#b5b5b5</color>
+    <color name="btn_text_dark">#65657b</color>
+    <color name="btn_text_grey">#b9b9c0</color>
+    <color name="btn_text_red">#da3939</color>
+    <color name="bolo_new_red">#f54545</color>
+    <color name="btn_text_light_red">#feaaaa</color>
+    <color name="btn_text_blue">#0092ff</color>
+    <color name="btn_text_light_blue">#87ccff</color>
+    <color name="accent">#FFC107</color>
+    <color name="star_deactivated">#D6D6D6</color>
+    <color name="transparent_color">#00000000</color>
+    <drawable name="white_drawable">#ffffff</drawable>
+    <drawable name="transparent_drawable">#00000000</drawable>
+    <color name="pic_border_background">#dcdcdc</color>
+    <color name="catalog_name_color">#626262</color>
+
+    <!-- bolo main colors start -->
+    <color name="bolo_green">#3ebb5b</color>
+    <color name="bolo_sea_blue">#0092ff</color>
+    <color name="bolo_light_red">#f97c20</color>
+    <color name="bolo_red">#da3939</color>
+    <color name="bolo_yellow">#fdd445</color>
+    <color name="bolo_red_transparent">#96da3939</color>
+    <color name="bolo_black">#313131</color>
+    <color name="bolo_orange">#ff6c45</color>
+    <color name="bolo_blue">#00adff</color>
+    <color name="bolo_light_blue">#00bfff</color>
+    <color name="bolo_light_orange">#c58158</color>
+    <color name="bolo_live_show_num">#7d7d7d</color>
+    <!-- bolo main colors  end -->
+    
+    <color name="grey_f9f9f9">#f9f9f9</color>
+    <color name="darkgrey">#959595</color>
+    <color name="btn_grey">#65657b</color>
+    <color name="darkgrey_transparent">#96959595</color>
+    <color name="grey">#999999</color>
+    <color name="light_grey">#bfbfbf</color>
+    <color name="white_background">#ffffffff</color>
+    <color name="grey_background">#eeeeee</color>
+    <color name="white_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="separator_line">#d2d2d2</color>
+    <color name="separator_line_bottom">#d2d2d2</color>
+    <color name="play_avatar_outline">#33000000</color>
+    <color name="dark_white">#eeeeee</color>
+    <color name="live_status_trailer">#ff0092ff</color>
+
+    <!-- tab_strip start -->
+    <color name="play_tab_strip_bottom">#d2d2d2</color>
+    <color name="play_tab_strip_side">#19000000</color>
+    <!-- tab_strip endt -->
+
+    <color name="talk_send_normal">#4f4f62</color>
+    <color name="talk_send_press">#737382</color>
+    <color name="talk_send_disable">#b9b9c0</color>
+    <color name="bolo_light_black">#4e4e4e</color>
+    <color name="comment_actionbar_bg">#eeeeee</color>
+
+    <!-- past shows color -->
+    <color name="light_grey_color">#585858</color>
+    <color name="white">#FFFFFF</color>
+    <color name="trace_text">#FF6B68</color>
+    <color name="my_fault">#E040FB</color>
+
+    <!--00%=FF    5%=F2    10%=E5    15%=D8    20%=CC    25%=BF    30%=B2
+        35%=A5    40%=99   45%=8c    50%=7F    55%=72    60%=66    65%=59
+        70%=4c    75%=3F   80%=33    85%=21    90%=19    95%=0c    100%=00
+        96%=0a 4%=f5 92%=0d 8%=eb-->
+    <color name="_black92">#19000000</color>
+    <color name="blue_4b76ff">#4b76ff</color>
+    <color name="grey_888cab">#888CAB</color>
+    <color name="black_66000000">#0d000000</color>
+    <color name="red_eb5c60">#EB5C60</color>
+    <drawable name="black_66181830">#7F181830</drawable>
+</resources>

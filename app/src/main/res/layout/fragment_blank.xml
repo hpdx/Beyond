@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_template"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/bolo_red"
+        android:textSize="@dimen/font_xxlarge" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="打开H5页面" />
+
+    <Button
+        android:id="@+id/btn_open_gank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="不带分页的List示例" />
+
+    <Button
+        android:id="@+id/btn_open_gank2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="带分页的List示例" />
+
+    <Button
+        android:id="@+id/btn_open_gank_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="多ViewHolder示例" />
+
+    <Button
+        android:id="@+id/btn_open_gank_tab_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tab（ViewPager）不带分页示例" />
+
+    <Button
+        android:id="@+id/btn_open_gank_tab_paging_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tab（ViewPager）带分页示例" />
+
+    <Button
+        android:id="@+id/btn_open_gank_multi_type_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="多类型Tab示例" />
+
+</LinearLayout>

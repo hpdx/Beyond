@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="page_content" type="id" />
+    <item name="loading_indicator" type="id" />
+    <item name="loading_indicator_progressbar" type="id" />
+    <item name="page_error_indicator" type="id" />
+    <item name="page_error_image" type="id" />
+    <item name="page_error_msg" type="id" />
+    <item name="page_empty_indicator" type="id" />
+    <item name="page_empty_image" type="id" />
+    <item name="page_empty_msg" type="id" />
+
+    <item name="no_results_view" type="id">false</item>
+    <item name="no_results_imageview" type="id">false</item>
+    <item name="no_results_textview" type="id">false</item>
+    <item name="no_results_sub_textview" type="id">false</item>
+
+    <item name="error_msg" type="id">false</item>
+    <item name="retry_button" type="id">false</item>
+    <item name="loading_msg" type="id">false</item>
+
+    <item name="up_to_top" type="id">false</item>
+    <item name="content_frame" type="id">false</item>
+
+</resources>

@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="action_bar_height">44dp</dimen>
+    <dimen name="content_margin">12.0dip</dimen>
+
+    <dimen name="material_progress_wheel_width">36.0dip</dimen>
+    <dimen name="material_progress_wheel_height">36.0dip</dimen>
+    <dimen name="material_progress_wheel_width_l">80.0dip</dimen>
+    <dimen name="material_progress_wheel_height_l">80.0dip</dimen>
+
+    <integer name="up_to_top_count">6</integer>
+    <dimen name="hairline_separator_thickness">1.0px</dimen>
+    <dimen name="card_divider_height">12dp</dimen>
+
+    <!-- play_tab_strip -->
+    <dimen name="play_tab_strip_height">38.0dip</dimen>
+    <dimen name="play_tab_strip_selected_underline_height">2.0dip</dimen>
+    <dimen name="play_tab_strip_full_underline_height">1.0px</dimen>
+    <dimen name="play_tab_strip_title_padding">12.0dip</dimen>
+    <dimen name="round_tab_strip_title_padding">30.0dip</dimen>
+    <dimen name="play_tab_strip_title_offset">52.0dip</dimen>
+    <dimen name="play_tab_strip_vertical_separator">24.0dip</dimen>
+    <dimen name="play_tab_strip_text_size">14sp</dimen>
+
+    <!-- 下拉刷新动画每帧持续的时长 -->
+    <integer name="pull_refresh_animation_duration">40</integer>
+    <integer name="loading_more_animation_duration">40</integer>
+
+    <!-- 列表底部Item的高度-->
+    <dimen name="list_footer_view_height">50dp</dimen>
+
+</resources>

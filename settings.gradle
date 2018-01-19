@@ -1,4 +1,7 @@
 include ':app',
+        ':libbasic',
         ':beyond',
         ':better',
-        ':rxbus'
+        ':rxbus',
+        ':libcommon',
+        ':libnetwork'

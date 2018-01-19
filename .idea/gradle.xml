@@ -11,6 +11,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/better" />
             <option value="$PROJECT_DIR$/beyond" />
+            <option value="$PROJECT_DIR$/libbasic" />
+            <option value="$PROJECT_DIR$/libcommon" />
+            <option value="$PROJECT_DIR$/libnetwork" />
             <option value="$PROJECT_DIR$/rxbus" />
           </set>
         </option>

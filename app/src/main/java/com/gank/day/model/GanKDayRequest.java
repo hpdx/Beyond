@@ -5,8 +5,8 @@ import com.gank.common.model.GanKInfo;
 import com.gank.network.ApiUrls;
 import com.gank.network.Apis;
 import com.trident.beyond.core.IModel;
-import com.trident.beyond.core.IRequest;
 import com.trident.beyond.model.BaseListRequest;
+import com.trident.dating.libcommon.IRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,7 @@ public class GanKDayRequest extends BaseListRequest<GanKDayBlock, IModel> {
         GanKDayInfo ganKDayInfo = response.results;
 
         // 福利
-        if(ganKDayInfo.福利 != null && ganKDayInfo.福利.size() > 0) {
+        if (ganKDayInfo.福利 != null && ganKDayInfo.福利.size() > 0) {
             GanKInfo ganKInfo = ganKDayInfo.福利.get(0);
 
             GanKDayBanner banner = new GanKDayBanner();
@@ -46,9 +46,11 @@ public class GanKDayRequest extends BaseListRequest<GanKDayBlock, IModel> {
 
         // Android
         ArrayList<GanKInfo> shows = ganKDayInfo.Android;
-        int size = shows.size();
-        for (int i = 0; i < size; i++) {
-            cellModels.add(new GanKCellModel(shows.get(i)));
+        if (shows != null) {
+            int size = shows.size();
+            for (int i = 0; i < size; i++) {
+                cellModels.add(new GanKCellModel(shows.get(i)));
+            }
         }
 
         // 添加标题
@@ -56,9 +58,11 @@ public class GanKDayRequest extends BaseListRequest<GanKDayBlock, IModel> {
 
         // iOS
         ArrayList<GanKInfo> iosShows = ganKDayInfo.iOS;
-        int size2 = iosShows.size();
-        for (int i = 0; i < size2; i++) {
-            cellModels.add(new GanKCellModel(iosShows.get(i)));
+        if (iosShows != null) {
+            int size2 = iosShows.size();
+            for (int i = 0; i < size2; i++) {
+                cellModels.add(new GanKCellModel(iosShows.get(i)));
+            }
         }
 
         // 添加标题
@@ -66,9 +70,11 @@ public class GanKDayRequest extends BaseListRequest<GanKDayBlock, IModel> {
 
         // 前端
         ArrayList<GanKInfo> webShows = ganKDayInfo.前端;
-        int size3 = webShows.size();
-        for (int i = 0; i < size3; i++) {
-            cellModels.add(new GanKCellModel(webShows.get(i)));
+        if (webShows != null) {
+            int size3 = webShows.size();
+            for (int i = 0; i < size3; i++) {
+                cellModels.add(new GanKCellModel(webShows.get(i)));
+            }
         }
 
         // 添加标题
@@ -76,9 +82,11 @@ public class GanKDayRequest extends BaseListRequest<GanKDayBlock, IModel> {
 
         // app
         ArrayList<GanKInfo> appShows = ganKDayInfo.App;
-        int size4 = appShows.size();
-        for (int i = 0; i < size4; i++) {
-            cellModels.add(new GanKCellModel(appShows.get(i)));
+        if (appShows != null) {
+            int size4 = appShows.size();
+            for (int i = 0; i < size4; i++) {
+                cellModels.add(new GanKCellModel(appShows.get(i)));
+            }
         }
 
         return cellModels;

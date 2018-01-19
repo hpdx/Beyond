@@ -5,10 +5,9 @@ import android.net.Uri;
 import com.gank.account.model.UserInfo;
 import com.gank.common.model.GanKBlock;
 import com.gank.day.model.GanKDayBlock;
-import com.gank.network.okhttp.OKHttpPost;
-import com.gank.network.okhttp.OKHttpRequest;
-import com.trident.beyond.core.IRequest;
-import com.trident.beyond.listener.ResponseListener;
+import com.trident.dating.libcommon.IRequest;
+import com.trident.dating.libcommon.listener.ResponseListener;
+import com.trident.dating.libnetwork.okhttp.OKHttpRequest;
 
 import java.util.HashMap;
 
@@ -21,11 +20,11 @@ import java.util.HashMap;
 public class Apis {
 
     public static IRequest getGankDay(String url, final ResponseListener<GanKDayBlock> listener) {
-        return new OKHttpRequest<>(url, listener, GanKDayBlock.class).execute();
+        return new OKHttpRequest<>(url, listener, GanKDayBlock.class).enqueue();
     }
 
     public static IRequest getGank(String url, final ResponseListener<GanKBlock> listener) {
-        return new OKHttpRequest<>(url, listener, GanKBlock.class).execute();
+        return new OKHttpRequest<>(url, listener, GanKBlock.class).enqueue();
     }
 
     public static void login(String phone, String pwd, ResponseListener<UserInfo> listener) {
@@ -35,7 +34,7 @@ public class Apis {
 
         final String url = Uri.withAppendedPath(Uri.parse("http://gank.io"),
                 ApiUrls.LOGIN).buildUpon().toString();
-        new OKHttpPost<>(url, params, listener, UserInfo.class).execute();
+        new OKHttpRequest<>(url, params, listener, UserInfo.class).enqueue();
     }
 
 }

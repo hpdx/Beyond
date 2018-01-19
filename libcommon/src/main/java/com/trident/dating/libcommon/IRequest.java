@@ -1,4 +1,4 @@
-package com.trident.beyond.core;
+package com.trident.dating.libcommon;
 
 /**
  * Created by android_ls on 16/8/27.

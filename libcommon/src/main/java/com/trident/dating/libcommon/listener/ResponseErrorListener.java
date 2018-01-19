@@ -1,4 +1,4 @@
-package com.trident.beyond.listener;
+package com.trident.dating.libcommon.listener;
 
 /**
  * Created by android_ls on 16/8/27.

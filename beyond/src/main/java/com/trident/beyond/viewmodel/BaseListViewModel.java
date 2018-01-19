@@ -3,9 +3,9 @@ package com.trident.beyond.viewmodel;
 import com.trident.beyond.core.MvvmBaseViewModel;
 import com.trident.beyond.listener.OnDataChangedListener;
 import com.trident.beyond.listener.OnRefreshCompleteListener;
-import com.trident.beyond.listener.ResponseErrorListener;
 import com.trident.beyond.model.BaseListRequest;
 import com.trident.beyond.view.BaseListView;
+import com.trident.dating.libcommon.listener.ResponseErrorListener;
 
 /**
  * Created by android_ls on 16/2/17.

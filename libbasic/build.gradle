@@ -1,15 +1,14 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
+
     defaultConfig {
-        applicationId "com.gank"
         minSdkVersion rootProject.ext.minSdk
         targetSdkVersion rootProject.ext.targetSdk
         versionCode 1
         versionName "1.0"
-        flavorDimensions "versionCode"
     }
 
     buildTypes {
@@ -17,10 +16,6 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-
-    dataBinding {
-        enabled = true
     }
 
     // 强制改变所有引用com.android.support版本为26.0.2。
@@ -34,11 +29,21 @@ android {
             }
         }
     }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(path: ':libbasic')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(path: ':beyond')
+    api project(path: ':better')
+    api project(path: ':libnetwork')
+    api project(path: ':rxbus')
 
-    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    compile rootProject.ext.dependencies["support-v4"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["design"]
+    compile rootProject.ext.dependencies["fresco-helper"]
+    compile rootProject.ext.dependencies["rxandroid"]
+    compile rootProject.ext.dependencies["rxjava"]
+
 }

@@ -1,11 +1,11 @@
 package com.trident.beyond.model;
 
 import com.trident.beyond.core.IModel;
-import com.trident.beyond.core.IRequest;
 import com.trident.beyond.listener.OnDataChangedListener;
 import com.trident.beyond.listener.OnRefreshCompleteListener;
-import com.trident.beyond.listener.ResponseErrorListener;
-import com.trident.beyond.listener.ResponseListener;
+import com.trident.dating.libcommon.IRequest;
+import com.trident.dating.libcommon.listener.ResponseErrorListener;
+import com.trident.dating.libcommon.listener.ResponseListener;
 
 import java.util.ArrayList;
 import java.util.List;

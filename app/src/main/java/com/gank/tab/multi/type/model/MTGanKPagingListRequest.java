@@ -10,8 +10,8 @@ import com.gank.day.model.GanKDayBanner;
 import com.gank.network.ApiUrls;
 import com.gank.network.Apis;
 import com.trident.beyond.core.IModel;
-import com.trident.beyond.core.IRequest;
 import com.trident.beyond.model.BasePaginatedListRequest;
+import com.trident.dating.libcommon.IRequest;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/libbasic/libbasic.iml" filepath="$PROJECT_DIR$/libbasic/libbasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/libcommon/libcommon.iml" filepath="$PROJECT_DIR$/libcommon/libcommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/libnetwork/libnetwork.iml" filepath="$PROJECT_DIR$/libnetwork/libnetwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netease_cloud_music/netease_cloud_music.iml" filepath="$PROJECT_DIR$/netease_cloud_music/netease_cloud_music.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxbus/rxbus.iml" filepath="$PROJECT_DIR$/rxbus/rxbus.iml" />
     </modules>
   </component>

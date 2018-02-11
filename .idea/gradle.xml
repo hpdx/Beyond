@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/libbasic" />
             <option value="$PROJECT_DIR$/libcommon" />
             <option value="$PROJECT_DIR$/libnetwork" />
+            <option value="$PROJECT_DIR$/netease_cloud_music" />
             <option value="$PROJECT_DIR$/rxbus" />
           </set>
         </option>

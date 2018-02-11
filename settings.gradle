@@ -1,4 +1,4 @@
-include ':app',
+include ':app', ':netease_cloud_music',
         ':libbasic',
         ':beyond',
         ':better',

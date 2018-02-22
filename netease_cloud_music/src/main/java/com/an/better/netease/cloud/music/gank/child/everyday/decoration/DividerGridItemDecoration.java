@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.gank.child.everyday.adapter;
+package com.an.better.netease.cloud.music.gank.child.everyday.decoration;
 
 import android.content.Context;
 import android.content.res.TypedArray;

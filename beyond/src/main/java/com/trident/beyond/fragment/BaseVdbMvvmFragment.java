@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.trident.beyond.core.MvvmBaseView;
-import com.trident.beyond.core.MvvmBaseViewModel;
-import com.trident.beyond.core.RootViewProxy;
+import com.trident.beyond.mvvm.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.RootViewProxy;
 
 public abstract class BaseVdbMvvmFragment<M, V extends MvvmBaseView<M>, VM extends MvvmBaseViewModel<M, V>>
         extends MvvmPageFragment<M, V, VM> {

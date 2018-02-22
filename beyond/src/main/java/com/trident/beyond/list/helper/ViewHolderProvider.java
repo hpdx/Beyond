@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 import com.trident.beyond.listener.OnViewCallback;
 import com.trident.beyond.viewholder.BaseViewHolder;
 

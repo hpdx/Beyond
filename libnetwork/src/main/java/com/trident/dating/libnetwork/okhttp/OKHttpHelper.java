@@ -5,7 +5,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import com.anbetter.log.MLog;
 import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
@@ -60,24 +59,17 @@ public class OKHttpHelper {
 
     public static OKHttpHelper get() {
         if (mOK == null) {
-            MLog.i("---------get()----------");
-
             synchronized (OKHttpHelper.class) {
                 if (mOK == null) {
-                    MLog.i("-----2----get()----------");
                     mOK = new OKHttpHelper();
                 }
             }
         }
-
-        MLog.i("-------3--get()----------");
         return mOK;
     }
 
     public OkHttpClient getOkHttpClient() {
-        if(mOkHttpClient == null) {
-            MLog.i("---------getOkHttpClient()----------");
-
+        if (mOkHttpClient == null) {
             if (mBuilder == null) {
                 mBuilder = new OkHttpClient.Builder();
                 mBuilder.connectTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
@@ -86,8 +78,6 @@ public class OKHttpHelper {
                 mBuilder.retryOnConnectionFailure(true);
                 mBuilder.followRedirects(true); // 请求支持重定向
                 mBuilder.addInterceptor(new RetryInterceptor(2)); // 弱网环境，网络请求失败了，重试2次
-
-                MLog.i("---------init()----------");
             }
 
             // 信任所有证书
@@ -125,7 +115,6 @@ public class OKHttpHelper {
             addHttpLoggingInterceptor();
             mOkHttpClient = mBuilder.build();
         }
-        MLog.i("-----22----getOkHttpClient()----------");
         return mOkHttpClient;
     }
 

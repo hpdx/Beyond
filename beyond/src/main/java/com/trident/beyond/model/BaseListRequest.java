@@ -1,6 +1,5 @@
 package com.trident.beyond.model;
 
-import com.trident.beyond.core.IModel;
 import com.trident.beyond.listener.OnDataChangedListener;
 import com.trident.beyond.listener.OnRefreshCompleteListener;
 import com.trident.dating.libcommon.IRequest;

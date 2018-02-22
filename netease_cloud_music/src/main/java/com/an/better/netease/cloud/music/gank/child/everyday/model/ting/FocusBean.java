@@ -1,6 +1,6 @@
 package com.an.better.netease.cloud.music.gank.child.everyday.model.ting;
 
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 
 import java.util.List;
 

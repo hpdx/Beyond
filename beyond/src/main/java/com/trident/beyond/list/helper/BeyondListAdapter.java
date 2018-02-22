@@ -4,7 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 import com.trident.beyond.model.BaseListRequest;
 import com.trident.beyond.viewholder.BaseViewHolder;
 

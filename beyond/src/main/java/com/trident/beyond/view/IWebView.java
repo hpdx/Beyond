@@ -1,6 +1,6 @@
 package com.trident.beyond.view;
 
-import com.trident.beyond.core.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseView;
 
 /**
  * Created by android_ls on 2017/3/21.

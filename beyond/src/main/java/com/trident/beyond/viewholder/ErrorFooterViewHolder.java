@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.trident.beyond.R;
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2017/2/9.

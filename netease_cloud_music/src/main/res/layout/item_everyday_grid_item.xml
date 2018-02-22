@@ -12,7 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@drawable/img_one_bi_one"
-            android:scaleType="fitXY"/>
+            android:scaleType="centerCrop"/>
 
         <TextView
             android:id="@+id/tv_three_one_one_title"

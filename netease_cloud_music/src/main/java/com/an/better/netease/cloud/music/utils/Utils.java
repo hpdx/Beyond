@@ -48,22 +48,6 @@ public class Utils {
         return Utils.HOME_TWO_URLS[index];
     }
 
-//    private static ArrayList<String> sixList;
-//    private static ArrayList<String> getSixUrl() {
-//        if (sixList == null) {
-//            synchronized (ArrayList.class) {
-//                if (sixList == null) {
-//                    sixList = new ArrayList<>();
-//                    for (int i = 1; i < 24; i++) {
-//                        sixList.add();
-//                    }
-//                    return sixList;
-//                }
-//            }
-//        }
-//        return sixList;
-//    }
-
     // 六图的随机图
     public static final String[] HOME_SIX_URLS = new String[] {
             "http://ojyz0c8un.bkt.clouddn.com/home_six_0.png",

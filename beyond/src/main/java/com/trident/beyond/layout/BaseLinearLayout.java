@@ -11,10 +11,10 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 
-import com.trident.beyond.core.MvvmBaseView;
-import com.trident.beyond.core.MvvmBaseViewModel;
-import com.trident.beyond.core.MvvmLinearLayout;
-import com.trident.beyond.core.RootViewProxy;
+import com.trident.beyond.mvvm.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmLinearLayout;
+import com.trident.beyond.mvvm.RootViewProxy;
 import com.trident.beyond.dialog.LoadingDialog;
 
 import java.io.EOFException;

@@ -3,9 +3,9 @@ package com.trident.beyond.tab;
 import android.content.Context;
 
 import com.dating.rxbus.RxBus;
-import com.trident.beyond.core.MvvmBaseTab;
-import com.trident.beyond.core.MvvmBaseView;
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseTab;
+import com.trident.beyond.mvvm.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 
 
 /**

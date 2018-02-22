@@ -3,7 +3,7 @@ package com.trident.beyond.fragment;
 import android.os.Bundle;
 
 import com.dating.rxbus.RxBus;
-import com.trident.beyond.core.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseView;
 import com.trident.beyond.model.BaseModel;
 import com.trident.beyond.view.BaseView;
 import com.trident.beyond.viewmodel.BaseViewModel;

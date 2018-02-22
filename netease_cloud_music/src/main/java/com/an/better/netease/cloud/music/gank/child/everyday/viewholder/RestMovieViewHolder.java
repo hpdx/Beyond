@@ -1,11 +1,9 @@
 package com.an.better.netease.cloud.music.gank.child.everyday.viewholder;
 
 import android.view.View;
-import android.widget.ImageView;
 
 import com.an.better.netease.cloud.music.databinding.ItemEverydayOneBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
-import com.an.better.netease.cloud.music.utils.Utils;
 import com.bumptech.glide.Glide;
 import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
@@ -29,12 +27,11 @@ public class RestMovieViewHolder extends BaseVdbViewHolder<ArrayList<GanKInfo>, 
         if(cellModel.size() > 0) {
             binding.tvOnePhotoTitle.setVisibility(View.VISIBLE);
             binding.tvOnePhotoTitle.setText(cellModel.get(0).desc);
-        }
 
-        binding.ivOnePhoto.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        Glide.with(binding.ivOnePhoto.getContext())
-                .load(Utils.getTwoImageUrl())
-                .into(binding.ivOnePhoto);
+            Glide.with(binding.ivOnePhoto.getContext())
+                    .load(cellModel.get(0).imageUrl)
+                    .into(binding.ivOnePhoto);
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-package com.trident.beyond.core;
+package com.trident.beyond.model;
 
 import android.support.v4.util.Pair;
 

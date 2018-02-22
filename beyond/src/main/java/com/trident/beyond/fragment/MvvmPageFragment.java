@@ -10,9 +10,9 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
 import com.dating.rxbus.RxBus;
-import com.trident.beyond.core.MvvmBaseFragment;
-import com.trident.beyond.core.MvvmBaseView;
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseFragment;
+import com.trident.beyond.mvvm.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 import com.trident.beyond.dialog.LoadingDialog;
 import com.trident.beyond.host.BinderFragment;
 import com.trident.beyond.host.PageFragmentHost;

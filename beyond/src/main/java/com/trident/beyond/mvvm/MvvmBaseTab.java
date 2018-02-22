@@ -1,4 +1,4 @@
-package com.trident.beyond.core;
+package com.trident.beyond.mvvm;
 
 import android.content.Context;
 import android.graphics.Bitmap;

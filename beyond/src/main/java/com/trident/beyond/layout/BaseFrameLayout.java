@@ -9,10 +9,10 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.trident.beyond.core.MvvmBaseView;
-import com.trident.beyond.core.MvvmBaseViewModel;
-import com.trident.beyond.core.MvvmFrameLayout;
-import com.trident.beyond.core.RootViewProxy;
+import com.trident.beyond.mvvm.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmFrameLayout;
+import com.trident.beyond.mvvm.RootViewProxy;
 import com.trident.beyond.dialog.LoadingDialog;
 
 /**

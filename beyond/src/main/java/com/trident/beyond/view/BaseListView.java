@@ -1,6 +1,6 @@
 package com.trident.beyond.view;
 
-import com.trident.beyond.core.MvvmBaseView;
+import com.trident.beyond.mvvm.MvvmBaseView;
 import com.trident.beyond.listener.OnRefreshCompleteListener;
 import com.trident.beyond.model.BaseListRequest;
 

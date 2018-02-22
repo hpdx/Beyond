@@ -3,7 +3,7 @@ package com.gank.account.viewmodel;
 import com.gank.account.model.UserInfo;
 import com.gank.account.view.LoginView;
 import com.gank.network.Apis;
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 import com.trident.dating.libcommon.listener.ResponseListener;
 
 public class LoginViewModel extends MvvmBaseViewModel<UserInfo, LoginView> {

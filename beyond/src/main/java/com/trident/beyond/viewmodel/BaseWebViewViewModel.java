@@ -5,7 +5,7 @@ import android.os.Build;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 import com.trident.beyond.view.IWebView;
 
 /**

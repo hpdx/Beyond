@@ -10,7 +10,7 @@ import com.gank.tab.multi.type.model.MTGanKPagingListRequest;
 import com.gank.tab.multi.type.viewholder.MTGanKDayViewHolder;
 import com.gank.tab.multi.type.viewholder.MTGanKViewHolder;
 import com.trident.beyond.adapter.BaseListPagingAdapter;
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 
 
 /**

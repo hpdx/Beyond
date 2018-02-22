@@ -5,8 +5,8 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 
-import com.trident.beyond.core.MvvmView;
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmView;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 
 /**
  * Created by android_ls on 2017/7/31.

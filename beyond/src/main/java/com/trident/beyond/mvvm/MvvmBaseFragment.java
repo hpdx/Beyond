@@ -1,4 +1,4 @@
-package com.trident.beyond.core;
+package com.trident.beyond.mvvm;
 
 import android.os.Bundle;
 import android.os.Handler;

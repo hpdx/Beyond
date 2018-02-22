@@ -1,6 +1,6 @@
 package com.trident.beyond.viewmodel;
 
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 import com.trident.beyond.model.BaseModel;
 import com.trident.beyond.view.BaseView;
 

@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="127dp"
             android:background="@drawable/img_two_bi_one"
-            android:scaleType="fitXY" />
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/tv_one_photo_title"

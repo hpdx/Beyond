@@ -19,11 +19,8 @@ public interface ApiUrls {
     // 首页轮播图
     String HOME_BANNER_URL = "ting?from=android&version=5.8.1.0&channel=ppzs&operator=3&method=baidu.ting.plaza.index&cuid=89CF1E1A06826F9AB95A34DC0F6AAA14";
 
-    // 每日数据： http://gank.io/api/day/年/月/日
-    String GANK_DAY_URL = "day/2016/11/24";
-
-
-
+    // 每日数据：https://gank.io/api/day/年/月/日
+    String GANK_DAY_URL = "day/2018/02/22";
 
 
 }

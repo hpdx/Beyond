@@ -1,7 +1,7 @@
 package com.an.better.netease.cloud.music.gank.child.everyday.model;
 
 
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2016/12/29.

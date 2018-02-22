@@ -1,6 +1,6 @@
 package com.trident.beyond.viewmodel;
 
-import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.mvvm.MvvmBaseViewModel;
 import com.trident.beyond.listener.OnDataChangedListener;
 import com.trident.beyond.listener.OnRefreshCompleteListener;
 import com.trident.beyond.model.BaseListRequest;

@@ -32,12 +32,12 @@ public class HomeBannerViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(FocusBean focusBean, int position) {
         if (focusBean.result != null && focusBean.result.size() > 0) {
-            ArrayList<String> mBannerImages = new ArrayList<>();
+            ArrayList<String> bannerImages = new ArrayList<>();
             for (int i = 0; i < focusBean.result.size(); i++) {
                 BannerBean bannerBean = focusBean.result.get(i);
-                mBannerImages.add(bannerBean.randpic);
+                bannerImages.add(bannerBean.randpic);
             }
-            mBannerView.setImages(mBannerImages).start();
+            mBannerView.setImages(bannerImages).start();
         }
     }
 

@@ -2,7 +2,6 @@ package com.trident.beyond.model;
 
 import android.text.TextUtils;
 
-import com.trident.beyond.core.IModel;
 import com.trident.dating.libcommon.IRequest;
 
 import java.util.ArrayList;

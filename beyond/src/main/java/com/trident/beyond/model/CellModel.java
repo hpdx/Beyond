@@ -1,7 +1,5 @@
 package com.trident.beyond.model;
 
-import com.trident.beyond.core.IModel;
-
 /**
  * Created by android_ls on 16/8/23.
  */

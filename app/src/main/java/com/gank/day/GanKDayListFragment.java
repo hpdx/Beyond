@@ -7,7 +7,7 @@ import com.gank.day.model.GanKDayCategory;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.day.view.GanKDayView;
 import com.gank.day.viewmodel.GanKDayListViewModel;
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 import com.trident.beyond.fragment.BaseListFragment;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;

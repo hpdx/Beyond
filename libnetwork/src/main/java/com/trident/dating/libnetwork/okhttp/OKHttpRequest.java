@@ -157,8 +157,6 @@ public class OKHttpRequest<T> implements Callback, IRequest {
 
     public IRequest enqueue() {
         mCall = OKHttpHelper.get().getOkHttpClient().newCall(getRequest());
-
-        MLog.i("---------enqueue()----------");
         mCall.enqueue(this);
         return this;
     }
@@ -171,7 +169,6 @@ public class OKHttpRequest<T> implements Callback, IRequest {
     private Request getRequest() {
         Request.Builder requestBuilder = new Request.Builder();
         if (GET == mMethod) {
-            MLog.i("------2323---getRequest()----------");
             requestBuilder.get();
         } else if (POST == mMethod) {
             requestBuilder.post(getRequestBody());
@@ -190,8 +187,6 @@ public class OKHttpRequest<T> implements Callback, IRequest {
 
     @Override
     public void onResponse(Call call, final Response response) {
-        MLog.i("---------onResponse()----------");
-
         if (mResponseListener == null) {
             return;
         }
@@ -247,8 +242,6 @@ public class OKHttpRequest<T> implements Callback, IRequest {
 
     @Override
     public void onFailure(Call call, final IOException error) {
-        MLog.i("---------onFailure()----------");
-
         if (mResponseListener == null) {
             return;
         }

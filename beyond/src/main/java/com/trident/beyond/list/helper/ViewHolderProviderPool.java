@@ -3,7 +3,7 @@ package com.trident.beyond.list.helper;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 
-import com.trident.beyond.core.IModel;
+import com.trident.beyond.model.IModel;
 
 import java.util.ArrayList;
 

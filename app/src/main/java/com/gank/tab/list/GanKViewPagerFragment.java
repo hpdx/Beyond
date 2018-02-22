@@ -59,8 +59,7 @@ public class GanKViewPagerFragment extends BaseViewPagerFragment<BaseModel, Base
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showTabView();
-        showTabIndicator();
+        showTabs();
     }
 
     @Override

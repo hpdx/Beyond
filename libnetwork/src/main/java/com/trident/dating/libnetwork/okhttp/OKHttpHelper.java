@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
+import com.anbetter.log.MLog;
 import com.franmontiel.persistentcookiejar.ClearableCookieJar;
 import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
@@ -13,12 +14,17 @@ import com.trident.dating.libnetwork.okhttp.interceptor.HttpLoggingInterceptor;
 import com.trident.dating.libnetwork.okhttp.interceptor.RetryInterceptor;
 import com.trident.dating.libnetwork.okhttp.utils.SSLSocketConfig;
 
+import java.security.SecureRandom;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
@@ -49,24 +55,77 @@ public class OKHttpHelper {
     private OkHttpClient mOkHttpClient;
 
     private OKHttpHelper() {
-        init();
+
     }
 
     public static OKHttpHelper get() {
         if (mOK == null) {
+            MLog.i("---------get()----------");
+
             synchronized (OKHttpHelper.class) {
                 if (mOK == null) {
+                    MLog.i("-----2----get()----------");
                     mOK = new OKHttpHelper();
                 }
             }
         }
+
+        MLog.i("-------3--get()----------");
         return mOK;
     }
 
     public OkHttpClient getOkHttpClient() {
-        if (mOkHttpClient == null) {
-            build();
+        if(mOkHttpClient == null) {
+            MLog.i("---------getOkHttpClient()----------");
+
+            if (mBuilder == null) {
+                mBuilder = new OkHttpClient.Builder();
+                mBuilder.connectTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
+                mBuilder.readTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
+                mBuilder.writeTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
+                mBuilder.retryOnConnectionFailure(true);
+                mBuilder.followRedirects(true); // 请求支持重定向
+                mBuilder.addInterceptor(new RetryInterceptor(2)); // 弱网环境，网络请求失败了，重试2次
+
+                MLog.i("---------init()----------");
+            }
+
+            // 信任所有证书
+            try {
+                TrustManager[] trustManagers = new TrustManager[]{new X509TrustManager() {
+                    @Override
+                    public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                    }
+
+                    @Override
+                    public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                    }
+
+                    @Override
+                    public X509Certificate[] getAcceptedIssuers() {
+                        return new X509Certificate[]{};
+                    }
+                }};
+
+                SSLContext sslContext = SSLContext.getInstance("TLS");
+                sslContext.init(null, trustManagers, new SecureRandom());
+                mBuilder.sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagers[0]);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            // 不验证域名
+            mBuilder.hostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+
+            addHttpLoggingInterceptor();
+            mOkHttpClient = mBuilder.build();
         }
+        MLog.i("-----22----getOkHttpClient()----------");
         return mOkHttpClient;
     }
 
@@ -75,18 +134,6 @@ public class OKHttpHelper {
             mHandler = new Handler(Looper.getMainLooper());
         }
         return mHandler;
-    }
-
-    private void init() {
-        if (mBuilder == null) {
-            mBuilder = new OkHttpClient.Builder();
-            mBuilder.connectTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
-            mBuilder.readTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
-            mBuilder.writeTimeout(DEFAULT_MILLISECONDS, TimeUnit.MILLISECONDS);
-            mBuilder.retryOnConnectionFailure(true);
-            mBuilder.followRedirects(true); // 请求支持重定向
-            mBuilder.addInterceptor(new RetryInterceptor(2)); // 弱网环境，网络请求失败了，重试2次
-        }
     }
 
     public OKHttpHelper setSSLSocketFactory(Context context) {
@@ -114,18 +161,10 @@ public class OKHttpHelper {
         return this;
     }
 
-    public OKHttpHelper log() {
+    public void addHttpLoggingInterceptor() {
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         mBuilder.addInterceptor(loggingInterceptor);
-        return this;
-    }
-
-    public void build() {
-        if (mBuilder == null) {
-            init();
-        }
-        mOkHttpClient = mBuilder.build();
     }
 
     /**
@@ -165,7 +204,7 @@ public class OKHttpHelper {
      */
     public void cancel(String url) {
         if (!TextUtils.isEmpty(url)) {
-            OkHttpClient okHttpClient = getOkHttpClient();
+            OkHttpClient okHttpClient = OKHttpHelper.get().getOkHttpClient();
             for (Call call : okHttpClient.dispatcher().queuedCalls()) {
                 if (url.equals(call.request().tag())) {
                     call.cancel();
@@ -186,7 +225,7 @@ public class OKHttpHelper {
      * 取消所有网络请求
      **/
     public void cancelAll() {
-        getOkHttpClient().dispatcher().cancelAll();
+        OKHttpHelper.get().getOkHttpClient().dispatcher().cancelAll();
     }
 
     /**
@@ -197,7 +236,7 @@ public class OKHttpHelper {
      */
     public boolean isExecuted(String url) {
         if (!TextUtils.isEmpty(url)) {
-            OkHttpClient okHttpClient = getOkHttpClient();
+            OkHttpClient okHttpClient = OKHttpHelper.get().getOkHttpClient();
             Dispatcher dispatcher = okHttpClient.dispatcher();
             for (Call call : dispatcher.queuedCalls()) {
                 if (url.equals(call.request().tag())) {

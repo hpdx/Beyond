@@ -254,9 +254,4 @@ public abstract class MvvmBaseTab<M, V extends MvvmBaseView<M>, VM extends MvvmB
 
     }
 
-    @Override
-    public void dismissProgressDialog() {
-
-    }
-
 }

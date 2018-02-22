@@ -216,7 +216,6 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
                 mPtrFrameLayout.removeView(mPtrHeaderView);
                 mPtrHeaderView = null;
             }
-
             mPtrFrameLayout = null;
         }
 

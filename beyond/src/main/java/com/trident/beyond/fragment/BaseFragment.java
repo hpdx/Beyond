@@ -31,8 +31,6 @@ public abstract class BaseFragment extends Fragment implements BinderFragment {
     protected PageFragmentHost mPageFragmentHost;
     protected LoadingDialog mProgressDialog;
     private Bundle mSavedInstanceState;
-
-    // UI线程Handler
     protected Handler mHandler;
 
     protected BaseFragment() {

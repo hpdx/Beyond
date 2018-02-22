@@ -56,7 +56,9 @@ public abstract class MvvmPageFragment<M, V extends MvvmBaseView<M>, VM extends 
         super.onActivityCreated(savedInstanceState);
         if (mPageFragmentHost == null) {
             mContext = getActivity();
-            mPageFragmentHost = (PageFragmentHost) getActivity();
+            if (getActivity() instanceof PageFragmentHost) {
+                mPageFragmentHost = (PageFragmentHost) getActivity();
+            }
         }
 
         if (savedInstanceState != null) {

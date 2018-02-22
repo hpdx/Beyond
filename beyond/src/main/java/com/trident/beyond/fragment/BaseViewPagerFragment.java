@@ -2,9 +2,7 @@ package com.trident.beyond.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
@@ -13,21 +11,19 @@ import android.view.View;
 import com.anbetter.log.MLog;
 import com.trident.beyond.R;
 import com.trident.beyond.adapter.BaseViewPagerAdapter;
-import com.trident.beyond.host.BinderFragment;
-import com.trident.beyond.host.PageFragmentHost;
-import com.trident.beyond.host.PageTabHost;
 import com.trident.beyond.core.MvvmBaseFragment;
 import com.trident.beyond.core.MvvmBaseView;
 import com.trident.beyond.core.MvvmBaseViewModel;
+import com.trident.beyond.host.BinderFragment;
+import com.trident.beyond.host.PageFragmentHost;
+import com.trident.beyond.host.PageTabHost;
 import com.trident.beyond.model.TabData;
 import com.trident.beyond.widgets.viewpagertab.VPTabContainer;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 如果你的Fragment里面，View容器是ViewPager，那么我建议让你的Fragment继承自该类，可以提升你的工作效率。
  *
  * Created by android_ls on 16/6/3.
  */
@@ -36,11 +32,11 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
 
     private static final String TAB_LAYOUT_INSTANCE_STATES = "TabLayoutInstanceStates";
     private static final String CURRENT_SELECTED_ITEM = "CurrentSelectedItem";
+
     private static final String TAG = "BaseViewPagerFragment";
 
     protected Context mContext;
     protected PageFragmentHost mPageFragmentHost;
-    protected Handler mHandler;
 
     protected ViewPager mViewPager;
     protected VPTabContainer mTabContainer;
@@ -82,31 +78,29 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
         if (mPageFragmentHost == null) {
             mContext = getActivity();
             mPageFragmentHost = (PageFragmentHost) getActivity();
-            mHandler = new Handler();
         }
-        rebindActionBar();
+
         if (savedInstanceState != null) {
             mSavedInstanceState = savedInstanceState;
+            restoreState();
         }
+
+        rebindActionBar();
+        loadData(false);
     }
 
-    protected void showTabView() {
+    protected void showTabs() {
         if (mTabDataList == null) {
             mTabDataList = getTabData();
-        }
-
-        if (mSavedInstanceState != null) {
-            restoreState();
         }
 
         mTabbedAdapter = createAdapter(mContext, mTabDataList);
         mViewPager.setAdapter(mTabbedAdapter);
         mViewPager.addOnPageChangeListener(this);
+
+        showTabIndicator();
     }
 
-    /**
-     * @return 获取几个TAB 相关信息
-     */
     protected abstract List<TabData> getTabData();
 
     protected abstract BaseViewPagerAdapter createAdapter(Context context, List<TabData> tabDataList);
@@ -117,10 +111,10 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
         mTabContainer.setSelectedIndicatorColor(
                 ContextCompat.getColor(mContext, R.color.bolo_red));
         mTabContainer.setViewPager(mViewPager);
+        mTabContainer.setVisibility(View.VISIBLE);
 
         mTabContainer.onPageSelected(mRestoreSelectedPanel);
         mViewPager.setCurrentItem(mRestoreSelectedPanel);
-        mTabContainer.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -131,22 +125,25 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
     }
 
     protected void recordState() {
-        if(mViewPager == null || mTabDataList == null || mTabDataList.size() == 0) {
+        if (mViewPager == null || mTabDataList.size() == 0) {
             return;
         }
 
         ArrayList<Bundle> instanceStates = new ArrayList<>();
         for (TabData tabData : mTabDataList) {
-            if(tabData.instanceState != null) {
+            if (tabData.instanceState != null) {
                 instanceStates.add(tabData.instanceState);
             }
         }
         mSavedInstanceState.putParcelableArrayList(TAB_LAYOUT_INSTANCE_STATES, instanceStates);
-        mSavedInstanceState.putInt(CURRENT_SELECTED_ITEM, mViewPager.getCurrentItem());
+
+        if (mViewPager.getCurrentItem() > 0) {
+            mSavedInstanceState.putInt(CURRENT_SELECTED_ITEM, mViewPager.getCurrentItem());
+        }
     }
 
     protected void restoreState() {
-        if(mViewPager == null || mTabDataList == null || mTabDataList.size() == 0) {
+        if (mViewPager == null || mTabDataList.size() == 0) {
             return;
         }
 
@@ -160,7 +157,12 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
                 }
             }
         }
-        mRestoreSelectedPanel = mSavedInstanceState.getInt(CURRENT_SELECTED_ITEM, 0);
+
+        if (mSavedInstanceState.containsKey(CURRENT_SELECTED_ITEM)) {
+            if (mSavedInstanceState.getInt(CURRENT_SELECTED_ITEM, 0) > 0) {
+                mRestoreSelectedPanel = mSavedInstanceState.getInt(CURRENT_SELECTED_ITEM, 0);
+            }
+        }
     }
 
     @Override
@@ -200,8 +202,6 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
 
     @Override
     public void onDestroy() {
-        mContext = null;
-        mPageFragmentHost = null;
         super.onDestroy();
     }
 
@@ -210,15 +210,14 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
      * 1、当前列表中item滚动的位置
      * 2、当前选中的Page
      * 3、ViewPager中所有Page的数据
-     *
+     * <p>
      * 推荐在子类的{@link #onDestroy()}中调用，示例如下
      *
-     *  @Override
-        public void onDestroy() {
-            super.onDestroy();
-            // 重置当前Page的所有状态
-            resetInstanceState();
-        }
+     * @Override public void onDestroy() {
+     * super.onDestroy();
+     * // 重置当前Page的所有状态
+     * resetInstanceState();
+     * }
      */
     protected void resetInstanceState() {
         mRestoreSelectedPanel = 0;
@@ -235,14 +234,14 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
      * }
      */
     protected void setCurrentPage() {
-        mHandler.post(new Runnable() {
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 if (mViewPager != null) {
-                    mViewPager.setCurrentItem(mRestoreSelectedPanel, true);
+                    mViewPager.setCurrentItem(mRestoreSelectedPanel);
                 }
             }
-        });
+        }, 20);
     }
 
     /**
@@ -266,15 +265,6 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
     public void onPageSelected(int position) {
         MLog.i(TAG, "onPageSelected position = " + position);
         mRestoreSelectedPanel = position;
-        if (position < getTabData().size()) {
-            for (int i = 0; i < getTabData().size(); i++) {
-                if (i == position) {
-                    getTabData().get(position).current = 1;
-                } else {
-                    getTabData().get(position).current = 0;
-                }
-            }
-        }
     }
 
     @Override
@@ -294,32 +284,9 @@ public abstract class BaseViewPagerFragment<M, V extends MvvmBaseView<M>, VM ext
         return false;
     }
 
-    protected String getErrorMessage(Throwable error, boolean pullToRefresh) {
-        return error.getMessage();
-    }
-
     @Override
-    public void dismissProgressDialog() {
-
-    }
-
-    /**
-     * 重写onDetach()回调方法，是为了解决在Fragment彼此替换时，系统报的如下Exception
-     * java.lang.IllegalStateException: No host
-     * at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1235)
-     */
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        try {
-            Field childFragmentManager = Fragment.class.getDeclaredField("mChildFragmentManager");
-            childFragmentManager.setAccessible(true);
-            childFragmentManager.set(this, null);
-        } catch (NoSuchFieldException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
+    protected String getErrorMessage(Throwable e, boolean pullToRefresh) {
+        return null;
     }
 
 }

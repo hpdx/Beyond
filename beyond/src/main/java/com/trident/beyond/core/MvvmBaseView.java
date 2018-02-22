@@ -22,6 +22,4 @@ public interface MvvmBaseView<M> extends MvvmView<M> {
 
     void showBannerTips(String message);
 
-    void dismissProgressDialog();
-
 }

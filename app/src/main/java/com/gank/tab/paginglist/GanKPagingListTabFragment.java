@@ -54,8 +54,7 @@ public class GanKPagingListTabFragment extends BaseViewPagerFragment<BaseModel, 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showTabView();
-        showTabIndicator();
+        showTabs();
     }
 
     @Override

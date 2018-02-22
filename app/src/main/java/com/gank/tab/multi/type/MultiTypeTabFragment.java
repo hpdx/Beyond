@@ -87,8 +87,7 @@ public class MultiTypeTabFragment extends BaseViewPagerFragment<BaseModel, BaseV
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        showTabView();
-        showTabIndicator();
+        showTabs();
     }
 
     @Override

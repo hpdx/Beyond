@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.youth.banner.Banner
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/banner"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/img_two_bi_one"
+    app:image_scale_type="center_crop"
+    app:indicator_drawable_selected="@drawable/indicator_selected"
+    app:indicator_drawable_unselected="@drawable/indicator_unselected"
+    app:indicator_height="7dp"
+    app:indicator_margin="3dp"
+    app:indicator_width="7dp"
+    app:is_auto_play="true"/>

@@ -3,13 +3,12 @@ package com.trident.beyond.viewholder;
 import android.content.Context;
 import android.databinding.ViewDataBinding;
 
-import com.trident.beyond.core.IModel;
 import com.trident.beyond.listener.OnViewCallback;
 
 /**
  * Created by android_ls on 16/7/21.
  */
-public abstract class BaseVdbViewHolder<M extends IModel, VDB extends ViewDataBinding>
+public abstract class BaseVdbViewHolder<M, VDB extends ViewDataBinding>
         extends BaseViewHolder<M> {
 
     protected VDB binding;

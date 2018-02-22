@@ -68,5 +68,7 @@
     <!--dialog的查看详情键-->
     <color name="colorBtDialog">#38659C</color>
 
+    <drawable name="grey_c6c6c6">#c6c6c6</drawable>
+    <drawable name="red_drawable">#ffce3d3a</drawable>
 
 </resources>

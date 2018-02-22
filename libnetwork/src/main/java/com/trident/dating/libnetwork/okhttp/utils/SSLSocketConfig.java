@@ -27,7 +27,7 @@ public class SSLSocketConfig {
         try {
             if (mX509TrustManager == null) {
                 CertificateFactory cf = CertificateFactory.getInstance("X.509");
-                InputStream cerInputStream = context.getApplicationContext().getAssets().open("jikeyue.crt");
+                InputStream cerInputStream = context.getApplicationContext().getAssets().open("xx.crt");
                 Certificate ca = cf.generateCertificate(cerInputStream);
 
                 String keyStoreType = KeyStore.getDefaultType();

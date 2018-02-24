@@ -3,13 +3,15 @@ package com.an.better.netease.cloud.music.gank.child.everyday.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.trident.beyond.model.IModel;
+
 import java.util.ArrayList;
 
 /**
  * Created by android_ls on 2016/12/28.
  */
 
-public class GanKInfo implements Parcelable {
+public class GanKInfo implements IModel, Parcelable {
 
     public String _id;
     public String createdAt;

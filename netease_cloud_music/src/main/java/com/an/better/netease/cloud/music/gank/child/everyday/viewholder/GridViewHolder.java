@@ -38,6 +38,7 @@ public class GridViewHolder extends BaseVdbViewHolder<ArrayList<GanKInfo>, ItemE
         } else {
             mAdapter.updateAdapterData(cellModel);
         }
+        binding.executePendingBindings();
     }
 
 }

@@ -22,6 +22,7 @@ public class TitleViewHolder extends BaseVdbViewHolder<GanKDayCategory, ItemEver
 
         binding.tvTitleType.setText(cellModel.title);
         binding.ivTitleType.setImageDrawable(CommonUtils.getDrawable(cellModel.resId));
+        binding.executePendingBindings();
     }
 
 }

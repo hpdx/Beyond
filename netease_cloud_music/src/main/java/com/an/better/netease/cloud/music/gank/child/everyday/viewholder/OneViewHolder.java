@@ -28,6 +28,7 @@ public class OneViewHolder extends BaseVdbViewHolder<GanKDayBanner, ItemEveryday
         Glide.with(binding.ivOnePhoto.getContext())
                 .load(cellModel.url)
                 .into(binding.ivOnePhoto);
+        binding.executePendingBindings();
     }
 
 }

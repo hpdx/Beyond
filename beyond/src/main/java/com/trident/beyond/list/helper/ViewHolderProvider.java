@@ -4,8 +4,8 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.trident.beyond.listener.OnItemClickListener;
 import com.trident.beyond.model.IModel;
-import com.trident.beyond.listener.OnViewCallback;
 import com.trident.beyond.viewholder.BaseViewHolder;
 
 /**
@@ -27,7 +27,7 @@ public abstract class ViewHolderProvider<M extends IModel, V extends BaseViewHol
         return childViewCallback;
     }
 
-    public V onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent, OnViewCallback<M> callback) {
+    public V onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent, OnItemClickListener<M> callback) {
         return null;
     }
 

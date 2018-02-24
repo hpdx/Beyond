@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.google.gson.Gson;
+import com.trident.beyond.listener.OnItemClickListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,13 +16,23 @@ import org.json.JSONObject;
 public abstract class BaseViewHolder<M> extends RecyclerView.ViewHolder {
 
     protected M mCellModel;
+    protected OnItemClickListener<M> mOnItemClickListener;
 
     public BaseViewHolder(View itemView) {
         super(itemView);
     }
 
+    public BaseViewHolder(View itemView, OnItemClickListener<M> onItemClickListener) {
+        super(itemView);
+        mOnItemClickListener = onItemClickListener;
+    }
+
     public void bind(M cellModel, final int position) {
         mCellModel = cellModel;
+    }
+
+    public void setOnItemClickListener(OnItemClickListener<M> onItemClickListener) {
+        mOnItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -29,7 +40,7 @@ public abstract class BaseViewHolder<M> extends RecyclerView.ViewHolder {
         return buildMessage(new Gson().toJson(mCellModel));
     }
 
-    String buildMessage(String msg) {
+    protected String buildMessage(String msg) {
         String message;
         try {
             if (msg.startsWith("{")) {

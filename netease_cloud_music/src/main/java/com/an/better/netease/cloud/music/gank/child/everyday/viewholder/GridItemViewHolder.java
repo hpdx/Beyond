@@ -29,7 +29,7 @@ public class GridItemViewHolder extends BaseVdbViewHolder<GanKInfo, ItemEveryday
         if(!TextUtils.isEmpty(cellModel.desc)) {
             binding.tvThreeOneOneTitle.setText(cellModel.desc);
         }
-
+        binding.executePendingBindings();
     }
 
 }

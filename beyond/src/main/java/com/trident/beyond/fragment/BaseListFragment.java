@@ -75,7 +75,7 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
         }
 
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
-        mLayoutManager = getLayoutManager();
+        mLayoutManager = createLayoutManager();
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         setRefreshEnabled();
@@ -129,7 +129,7 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
         loadData(false);
     }
 
-    public RecyclerView.LayoutManager getLayoutManager() {
+    public RecyclerView.LayoutManager createLayoutManager() {
         return new LinearLayoutManager(mContext);
     }
 

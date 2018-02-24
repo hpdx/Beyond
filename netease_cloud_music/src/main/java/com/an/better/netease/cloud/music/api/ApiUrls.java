@@ -22,5 +22,8 @@ public interface ApiUrls {
     // 每日数据：https://gank.io/api/day/年/月/日
     String GANK_DAY_URL = "day/2018/02/22";
 
+    // https://gank.io/api/data/数据类型/请求个数/第几页
+    // https://gank.io/api/data/福利/30/1
+    String GANK_MEIZI_URL = "data/福利/";
 
 }

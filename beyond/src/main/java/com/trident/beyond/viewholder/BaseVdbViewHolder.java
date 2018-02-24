@@ -3,7 +3,7 @@ package com.trident.beyond.viewholder;
 import android.content.Context;
 import android.databinding.ViewDataBinding;
 
-import com.trident.beyond.listener.OnViewCallback;
+import com.trident.beyond.listener.OnItemClickListener;
 
 /**
  * Created by android_ls on 16/7/21.
@@ -13,7 +13,6 @@ public abstract class BaseVdbViewHolder<M, VDB extends ViewDataBinding>
 
     protected VDB binding;
     protected Context mContext;
-    protected OnViewCallback mOnViewCallback;
 
     public BaseVdbViewHolder(VDB viewDataBinding) {
         super(viewDataBinding.getRoot());
@@ -21,9 +20,9 @@ public abstract class BaseVdbViewHolder<M, VDB extends ViewDataBinding>
         this.binding = viewDataBinding;
     }
 
-    public BaseVdbViewHolder(VDB viewDataBinding, OnViewCallback<M> callback) {
+    public BaseVdbViewHolder(VDB viewDataBinding, OnItemClickListener<M> listener) {
        this(viewDataBinding);
-       this.mOnViewCallback = callback;
+       this.mOnItemClickListener = listener;
     }
 
 }

@@ -27,8 +27,8 @@ public class BeyondListAdapter<M extends BaseListRequest<?, ?>> extends BaseList
     @Override
     public final RecyclerView.ViewHolder onCreateBLMViewHolder(ViewGroup parent, int viewType) {
         ViewHolderProvider viewHolderProvider = ViewHolderProviderPool.getCellProvider(viewType);
-        if(viewHolderProvider.isChildViewCallback() && mOnViewCallback != null) {
-            final RecyclerView.ViewHolder viewHolder = viewHolderProvider.onCreateViewHolder(mLayoutInflater, parent, mOnViewCallback);
+        if(viewHolderProvider.isChildViewCallback() && mOnItemClickListener != null) {
+            final RecyclerView.ViewHolder viewHolder = viewHolderProvider.onCreateViewHolder(mLayoutInflater, parent, mOnItemClickListener);
             setOnItemClickListener(viewHolder);
             return viewHolder;
         }

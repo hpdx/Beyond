@@ -32,6 +32,7 @@ public class RestMovieViewHolder extends BaseVdbViewHolder<ArrayList<GanKInfo>, 
                     .load(cellModel.get(0).imageUrl)
                     .into(binding.ivOnePhoto);
         }
+        binding.executePendingBindings();
     }
 
 }

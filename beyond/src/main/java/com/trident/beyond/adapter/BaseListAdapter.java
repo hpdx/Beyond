@@ -114,7 +114,7 @@ public abstract class BaseListAdapter<M extends BaseListRequest<?, ?>> extends R
                 }
 
                 if (mOnItemClickListener != null) {
-                    mOnItemClickListener.onClick(v, mList.getItems().get(position), position);
+                    mOnItemClickListener.onItemClick(v, mList.getItems().get(position), position);
                 }
             }
         });

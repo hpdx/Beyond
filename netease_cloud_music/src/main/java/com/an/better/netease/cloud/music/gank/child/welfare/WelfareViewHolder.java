@@ -46,7 +46,7 @@ public class WelfareViewHolder extends BaseVdbViewHolder<GanKInfo, ItemWelfareBi
             @Override
             public void onClick(View v) {
                 if (mOnItemClickListener != null) {
-                    mOnItemClickListener.onClick(binding.ivWelfare, cellModel, position);
+                    mOnItemClickListener.onItemClick(binding.ivWelfare, cellModel, position);
                 }
             }
         });

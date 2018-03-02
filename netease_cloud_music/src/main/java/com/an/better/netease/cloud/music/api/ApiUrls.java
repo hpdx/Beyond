@@ -11,7 +11,7 @@ public interface ApiUrls {
     String GANK_BASE_URL = "https://gank.io/api/";
 
     // 豆瓣
-    String DOUBAN_BASE_URL = "Https://api.douban.com/";
+    String DOUBAN_BASE_URL = "https://api.douban.com/";
 
     // 轮播图
     String TING_BASE_URL = "https://tingapi.ting.baidu.com/v1/restserver/";
@@ -25,5 +25,11 @@ public interface ApiUrls {
     // https://gank.io/api/data/数据类型/请求个数/第几页
     // https://gank.io/api/data/福利/30/1
     String GANK_MEIZI_URL = "data/福利/";
+
+    // 豆瓣热映电影，每日更新
+    // https://api.douban.com/v2/movie/in_theaters
+    String DOUBAN_HOT_MOVIE_URL = "v2/movie/in_theaters";
+
+
 
 }

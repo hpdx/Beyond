@@ -59,6 +59,7 @@ public abstract class BaseListPagingAdapter<M extends BasePaginatedListRequest<?
         }
     }
 
+    @Override
     public void setFooterViewType() {
         if(mList.inErrorState()) {
             this.mFooterViewType = FOOTER_VIEW_TYPE_ERROR;

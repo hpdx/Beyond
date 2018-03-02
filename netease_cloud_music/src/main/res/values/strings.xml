@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">netease_cloud_music</string>
     <string name="actionbar_search">搜索</string>
+    <string name="no_name">佚名</string>
+    <string name="string_rating">评分：</string>
+    <string name="string_rating_num">人评分</string>
+    <string name="string_type">类型：</string>
+    <string name="string_publisher">出版社：</string>
 </resources>

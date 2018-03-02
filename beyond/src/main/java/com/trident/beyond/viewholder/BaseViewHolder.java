@@ -1,7 +1,10 @@
 package com.trident.beyond.viewholder;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.gson.Gson;
 import com.trident.beyond.listener.OnItemClickListener;
@@ -15,15 +18,28 @@ import org.json.JSONObject;
  */
 public abstract class BaseViewHolder<M> extends RecyclerView.ViewHolder {
 
+    protected Context mContext;
     protected M mCellModel;
     protected OnItemClickListener<M> mOnItemClickListener;
 
     public BaseViewHolder(View itemView) {
         super(itemView);
+        mContext = itemView.getContext();
     }
 
     public BaseViewHolder(View itemView, OnItemClickListener<M> onItemClickListener) {
-        super(itemView);
+        this(itemView);
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    public BaseViewHolder(LayoutInflater layoutInflater, int resId, ViewGroup parent) {
+        super(layoutInflater.inflate(resId, parent, false));
+        mContext = itemView.getContext();
+    }
+
+    public BaseViewHolder(LayoutInflater layoutInflater, int resId, ViewGroup parent,
+                          OnItemClickListener<M> onItemClickListener) {
+        this(layoutInflater, resId, parent);
         mOnItemClickListener = onItemClickListener;
     }
 

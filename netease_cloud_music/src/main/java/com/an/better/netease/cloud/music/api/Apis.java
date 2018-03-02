@@ -2,6 +2,7 @@ package com.an.better.netease.cloud.music.api;
 
 import android.net.Uri;
 
+import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBlock;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.TingBlock;
 import com.an.better.netease.cloud.music.gank.child.welfare.GankDataBlock;
@@ -52,6 +53,16 @@ public class Apis {
      */
     public static IRequest getGankMeizi(String url, final ResponseListener<GankDataBlock> listener) {
         return new OKHttpRequest<>(url, listener, GankDataBlock.class).enqueue();
+    }
+
+    /**
+     * 获取豆瓣热门电影
+     * @param url
+     * @param listener
+     * @return
+     */
+    public static IRequest getHotMovies(String url, final ResponseListener<HotMovieBlock> listener) {
+        return new OKHttpRequest<>(url, listener, HotMovieBlock.class).enqueue();
     }
 
 

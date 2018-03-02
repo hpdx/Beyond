@@ -1,30 +1,52 @@
 package com.an.better.netease.cloud.music.douban;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.R;
+import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
+import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
+import com.anbetter.log.MLog;
+import com.trident.beyond.adapter.BaseListAdapter;
+import com.trident.beyond.fragment.BaseListFragment;
+import com.trident.beyond.listener.OnItemClickListener;
+import com.trident.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2018/1/26.
  */
 
-public class DoubanFragment extends Fragment {
+public class DoubanFragment extends BaseListFragment<DoubanListRequest, DoubanListView,
+        DoubanListViewModel> implements DoubanListView, OnItemClickListener<IModel> {
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getLayoutRes() {
+        return R.layout.fragment_douban;
     }
 
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_douban, container, false);
+    protected DoubanListRequest getList() {
+        return new DoubanListRequest();
     }
 
+    @Override
+    protected DoubanListViewModel createViewModel() {
+        return new DoubanListViewModel();
+    }
+
+    @Override
+    protected BaseListAdapter createAdapter(DoubanListRequest data) {
+        return new DoubanListAdapter(data, this);
+    }
+
+    @Override
+    public void onItemClick(View view, IModel data, int position) {
+        MLog.i("onItemClick position = " + position);
+        if(data instanceof HotMovieTitle) {
+
+        } else if(data instanceof SubjectsBean) {
+
+        }
+
+    }
 
 }

@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.an.better.netease.cloud.music">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:name=".App"
@@ -18,9 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.an.better.netease.cloud.music.SplashActivity"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/ViewBigPicTheme">
+        <activity
+            android:name="com.an.better.netease.cloud.music.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ViewBigPicTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -28,8 +29,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.an.better.netease.cloud.music.MainActivity">
-        </activity>
+        <activity
+            android:name="com.an.better.netease.cloud.music.MainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.an.better.netease.cloud.music.webview.WebViewActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

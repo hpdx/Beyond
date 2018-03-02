@@ -7,6 +7,7 @@ import com.an.better.netease.cloud.music.databinding.ItemEverydayGridBinding;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayOneBinding;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayTitleBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.EverydayListRequest;
+import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBanner;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCategory;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
@@ -26,8 +27,10 @@ import java.util.ArrayList;
 
 public class EverydayAdapter extends BaseListAdapter<EverydayListRequest> {
 
-    public EverydayAdapter(EverydayListRequest baseList) {
+    private EverydayEventHandler mEventHandler;
+    public EverydayAdapter(EverydayListRequest baseList, EverydayEventHandler eventHandler) {
         super(baseList);
+        this.mEventHandler = eventHandler;
     }
 
     @Override
@@ -39,23 +42,23 @@ public class EverydayAdapter extends BaseListAdapter<EverydayListRequest> {
     public RecyclerView.ViewHolder onCreateBLMViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case EverydayListRequest.VIEW_TYPE_BANNER:
-                return new HomeBannerViewHolder(mLayoutInflater, parent);
+                return new HomeBannerViewHolder(mLayoutInflater, parent, mEventHandler);
             case EverydayListRequest.VIEW_TYPE_BLOCK_TITLE:
                 return new TitleViewHolder(ItemEverydayTitleBinding.inflate(mLayoutInflater, parent, false));
             case EverydayListRequest.VIEW_TYPE_MEIZI:
-                return new OneViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false));
+                return new OneViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             case EverydayListRequest.VIEW_TYPE_REST_MOVIE:
-                return new RestMovieViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false));
+                return new RestMovieViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             case EverydayListRequest.VIEW_TYPE_ANDROID:
-                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 2, 10);
+                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 2, 10, mEventHandler);
             case EverydayListRequest.VIEW_TYPE_IOS_BLOCK:
-                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 2, 10);
+                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 2, 10, mEventHandler);
             case EverydayListRequest.VIEW_TYPE_RECOMMEND:
-                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 3, 5);
+                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 3, 5, mEventHandler);
             case EverydayListRequest.VIEW_TYPE_FRONT_WEB:
-                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 3, 5);
+                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 3, 5, mEventHandler);
             case EverydayListRequest.VIEW_TYPE_APP:
-                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 1, 0);
+                return new GridViewHolder(ItemEverydayGridBinding.inflate(mLayoutInflater, parent, false), 1, 0, mEventHandler);
             default:
                 String unknown = "Unknown type for onCreateViewHolder" + viewType;
                 throw new IllegalStateException(unknown);

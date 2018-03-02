@@ -4,6 +4,7 @@ import android.support.v7.widget.GridLayoutManager;
 
 import com.an.better.netease.cloud.music.databinding.ItemEverydayGridBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.adapter.GridAdapter;
+import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.facebook.fresco.helper.utils.DensityUtil;
 import com.trident.beyond.viewholder.BaseVdbViewHolder;
@@ -19,10 +20,12 @@ import java.util.ArrayList;
 public class GridViewHolder extends BaseVdbViewHolder<ArrayList<GanKInfo>, ItemEverydayGridBinding> {
 
     private GridAdapter mAdapter;
+    private EverydayEventHandler mEventHandler;
 
-    public GridViewHolder(ItemEverydayGridBinding viewDataBinding, int columnCount, float divider) {
+    public GridViewHolder(ItemEverydayGridBinding viewDataBinding, int columnCount, float divider,
+                          EverydayEventHandler eventHandler) {
         super(viewDataBinding);
-
+        this.mEventHandler = eventHandler;
         binding.recyclerView.setLayoutManager(new GridLayoutManager(itemView.getContext(), columnCount));
         binding.recyclerView.addItemDecoration(new GridItemDecoration(
                 DensityUtil.dipToPixels(mContext, divider),

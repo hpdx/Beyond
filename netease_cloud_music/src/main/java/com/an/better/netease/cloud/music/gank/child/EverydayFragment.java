@@ -9,8 +9,11 @@ import com.an.better.netease.cloud.music.gank.child.everyday.EverydayListRequest
 import com.an.better.netease.cloud.music.gank.child.everyday.EverydayListView;
 import com.an.better.netease.cloud.music.gank.child.everyday.EverydayViewModel;
 import com.an.better.netease.cloud.music.gank.child.everyday.adapter.EverydayAdapter;
+import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
+import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.BannerBean;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.TingBlock;
+import com.an.better.netease.cloud.music.webview.WebViewActivity;
 import com.anbetter.log.MLog;
 import com.trident.beyond.adapter.BaseListAdapter;
 import com.trident.beyond.fragment.BaseListFragment;
@@ -23,7 +26,7 @@ import com.trident.dating.libcommon.listener.ResponseListener;
  */
 
 public class EverydayFragment extends BaseListFragment<EverydayListRequest, EverydayListView,
-        EverydayViewModel>  implements EverydayListView {
+        EverydayViewModel>  implements EverydayListView, EverydayEventHandler {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +70,7 @@ public class EverydayFragment extends BaseListFragment<EverydayListRequest, Ever
 
     @Override
     protected BaseListAdapter createAdapter(EverydayListRequest data) {
-        return new EverydayAdapter(data);
+        return new EverydayAdapter(data, this);
     }
 
     @Override
@@ -85,5 +88,14 @@ public class EverydayFragment extends BaseListFragment<EverydayListRequest, Ever
         super.onDestroy();
         MLog.i("EverydayFragment--->onDestroy");
     }
+
+    @Override
+    public void OnBannerClick(BannerBean bannerBean, int position) {
+        if (bannerBean.code != null && (bannerBean.code.startsWith("http")
+                || bannerBean.code.startsWith("https"))) {
+            WebViewActivity.loadUrl(mContext, bannerBean.code, "加载中...");
+        }
+    }
+
 
 }

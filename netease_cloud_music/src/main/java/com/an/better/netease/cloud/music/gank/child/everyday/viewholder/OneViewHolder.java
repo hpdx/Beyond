@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.an.better.netease.cloud.music.databinding.ItemEverydayOneBinding;
+import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBanner;
 import com.bumptech.glide.Glide;
 import com.trident.beyond.viewholder.BaseVdbViewHolder;
@@ -15,8 +16,10 @@ import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 public class OneViewHolder extends BaseVdbViewHolder<GanKDayBanner, ItemEverydayOneBinding> {
 
-    public OneViewHolder(ItemEverydayOneBinding viewDataBinding) {
+    private EverydayEventHandler mEventHandler;
+    public OneViewHolder(ItemEverydayOneBinding viewDataBinding, EverydayEventHandler eventHandler) {
         super(viewDataBinding);
+        this.mEventHandler = eventHandler;
     }
 
     @Override

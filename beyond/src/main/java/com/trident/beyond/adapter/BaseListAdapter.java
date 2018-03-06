@@ -75,10 +75,7 @@ public abstract class BaseListAdapter<M extends BaseListRequest<?, ?>> extends R
             return getFooterNoneView(mLayoutInflater, parent);
         }
 
-        final RecyclerView.ViewHolder viewHolder = onCreateBLMViewHolder(parent, viewType);
-        setOnItemClickListener(viewHolder);
-
-        return viewHolder;
+        return onCreateBLMViewHolder(parent, viewType);
     }
 
     @Override

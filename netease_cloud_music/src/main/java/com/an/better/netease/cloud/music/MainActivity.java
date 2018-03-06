@@ -18,7 +18,7 @@ import com.an.better.netease.cloud.music.book.BookFragment;
 import com.an.better.netease.cloud.music.databinding.ActivityMainBinding;
 import com.an.better.netease.cloud.music.douban.DoubanFragment;
 import com.an.better.netease.cloud.music.gank.GankFragment;
-import com.an.better.netease.cloud.music.statusbar.StatusBarUtil;
+import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
 import com.trident.beyond.host.PageFragmentHost;
 
 import java.util.ArrayList;
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
 
         initStatusView();
 
-        StatusBarUtil.setColorNoTranslucentForDrawerLayout(MainActivity.this, mBinding.drawerLayout,
+        StatusBarUtils.setColorNoTranslucentForDrawerLayout(MainActivity.this, mBinding.drawerLayout,
                 getResources().getColor(R.color.colorTheme));
 
         setSupportActionBar(mBinding.toolbar);
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity
 
     private void initStatusView() {
         ViewGroup.LayoutParams layoutParams = mBinding.viewStatus.getLayoutParams();
-        layoutParams.height = StatusBarUtil.getStatusBarHeight(this);
+        layoutParams.height = StatusBarUtils.getStatusBarHeight(this);
         mBinding.viewStatus.setLayoutParams(layoutParams);
     }
 

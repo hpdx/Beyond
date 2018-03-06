@@ -1,5 +1,8 @@
 package com.an.better.netease.cloud.music.douban.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.an.better.netease.cloud.music.utils.Utils;
 import com.trident.beyond.model.IModel;
 
@@ -9,7 +12,7 @@ import java.util.List;
  * Created by android_ls on 2018/3/2.
  */
 
-public class SubjectsBean implements IModel {
+public class SubjectsBean implements IModel, Parcelable {
 
     /**
      * rating : {"max":10,"average":8.5,"stars":"45","min":0}
@@ -55,56 +58,63 @@ public class SubjectsBean implements IModel {
         return Utils.formatName(directors);
     }
 
-    public static class RatingBean {
-        /**
-         * max : 10
-         * average : 8.5
-         * stars : 45
-         * min : 0
-         */
-
-        public int max;
-        public double average;
-        public String stars;
-        public int min;
+    /**
+     * 电影类型
+     * @return
+     */
+    public String getGenres() {
+        return Utils.formatGenres(genres);
     }
 
-    public static class ImagesBean {
-        /**
-         * small : https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2514175916.jpg
-         * large : https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2514175916.jpg
-         * medium : https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2514175916.jpg
-         */
-
-        public String small;
-        public String large;
-        public String medium;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public static class CastsBean {
-        /**
-         * alt : https://movie.douban.com/celebrity/1274761/
-         * avatars : {"small":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg","large":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg","medium":"https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg"}
-         * name : 张译
-         * id : 1274761
-         */
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeParcelable(this.rating, flags);
+        dest.writeString(this.title);
+        dest.writeInt(this.collect_count);
+        dest.writeString(this.original_title);
+        dest.writeString(this.subtype);
+        dest.writeString(this.year);
+        dest.writeParcelable(this.images, flags);
+        dest.writeString(this.alt);
+        dest.writeString(this.id);
+        dest.writeStringList(this.genres);
+        dest.writeTypedList(this.casts);
+        dest.writeTypedList(this.directors);
+    }
 
-        public String alt;
-        public AvatarsBean avatars;
-        public String name;
-        public String id;
+    public SubjectsBean() {
+    }
 
-        public static class AvatarsBean {
-            /**
-             * small : https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg
-             * large : https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg
-             * medium : https://img1.doubanio.com/view/celebrity/s_ratio_celebrity/public/p1489386626.47.jpg
-             */
+    protected SubjectsBean(Parcel in) {
+        this.rating = in.readParcelable(RatingBean.class.getClassLoader());
+        this.title = in.readString();
+        this.collect_count = in.readInt();
+        this.original_title = in.readString();
+        this.subtype = in.readString();
+        this.year = in.readString();
+        this.images = in.readParcelable(ImagesBean.class.getClassLoader());
+        this.alt = in.readString();
+        this.id = in.readString();
+        this.genres = in.createStringArrayList();
+        this.casts = in.createTypedArrayList(CastsBean.CREATOR);
+        this.directors = in.createTypedArrayList(CastsBean.CREATOR);
+    }
 
-            public String small;
-            public String large;
-            public String medium;
+    public static final Parcelable.Creator<SubjectsBean> CREATOR = new Parcelable.Creator<SubjectsBean>() {
+        @Override
+        public SubjectsBean createFromParcel(Parcel source) {
+            return new SubjectsBean(source);
         }
-    }
+
+        @Override
+        public SubjectsBean[] newArray(int size) {
+            return new SubjectsBean[size];
+        }
+    };
 
 }

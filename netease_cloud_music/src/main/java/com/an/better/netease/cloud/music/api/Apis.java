@@ -3,6 +3,7 @@ package com.an.better.netease.cloud.music.api;
 import android.net.Uri;
 
 import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
+import com.an.better.netease.cloud.music.douban.model.MovieDetailInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBlock;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.TingBlock;
 import com.an.better.netease.cloud.music.gank.child.welfare.GankDataBlock;
@@ -65,5 +66,16 @@ public class Apis {
         return new OKHttpRequest<>(url, listener, HotMovieBlock.class).enqueue();
     }
 
+    /**
+     * 获取电影详情
+     * @param movieId
+     * @param listener
+     */
+    public static void getMovieDetail(String movieId, ResponseListener<MovieDetailInfo> listener) {
+        Uri.Builder builder = Uri.withAppendedPath(Uri.parse(ApiUrls.DOUBAN_BASE_URL),
+                ApiUrls.MOVIE_DETAIL_URL).buildUpon();
+        builder.appendPath(movieId);
+        new OKHttpRequest<>(builder.toString(), listener, MovieDetailInfo.class).enqueue();
+    }
 
 }

@@ -10,7 +10,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 
-import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
+import com.an.better.netease.cloud.music.douban.model.CastsBean;
 
 import java.util.List;
 import java.util.Random;
@@ -99,7 +99,7 @@ public class Utils {
     /**
      * 格式化导演、主演名字
      */
-    public static String formatName(List<SubjectsBean.CastsBean> casts) {
+    public static String formatName(List<CastsBean> casts) {
         if (casts != null && casts.size() > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < casts.size(); i++) {

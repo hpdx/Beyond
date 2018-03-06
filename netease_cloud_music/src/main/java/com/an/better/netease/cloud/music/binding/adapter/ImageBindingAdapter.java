@@ -40,4 +40,36 @@ public class ImageBindingAdapter {
                 .into(imageView);
     }
 
+    /**
+     * 电影详情页显示高斯背景图
+     */
+    @BindingAdapter("android:showImgBg")
+    public static void showImgBg(ImageView imageView, String url) {
+        RequestOptions options = new RequestOptions()
+                .optionalTransform(new BlurTransformation(imageView.getContext(), 23, 3))
+                .placeholder(R.drawable.stackblur_default);
+
+        Glide.with(imageView.getContext())
+                .load(url)
+                .apply(options)
+                .into(imageView);
+    }
+
+    /**
+     * 演员列表图片
+     */
+    @BindingAdapter("android:showImg")
+    public static void showImg(ImageView imageView, String url) {
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.drawable.img_default_movie)
+                .override(DensityUtil.dip2px(imageView.getContext(), 70),
+                        DensityUtil.dip2px(imageView.getContext(), 70));
+
+        Glide.with(imageView.getContext())
+                .load(url)
+                .apply(options)
+                .into(imageView);
+    }
+
 }

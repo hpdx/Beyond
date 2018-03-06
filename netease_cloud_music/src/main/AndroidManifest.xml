@@ -19,7 +19,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.an.better.netease.cloud.music.SplashActivity"
+            android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewBigPicTheme">
             <intent-filter>
@@ -30,11 +30,16 @@
         </activity>
 
         <activity
-            android:name="com.an.better.netease.cloud.music.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name="com.an.better.netease.cloud.music.webview.WebViewActivity"
+            android:name=".douban.MovieDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyScrollPage"/>
+
+        <activity
+            android:name=".webview.WebViewActivity"
             android:screenOrientation="portrait"/>
     </application>
 

@@ -21,7 +21,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.an.better.netease.cloud.music.R;
-import com.an.better.netease.cloud.music.statusbar.StatusBarUtil;
+import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
 import com.an.better.netease.cloud.music.utils.CommonUtils;
 import com.an.better.netease.cloud.music.utils.ToastUtils;
 import com.an.better.netease.cloud.music.utils.Utils;
@@ -68,7 +68,7 @@ public class WebViewActivity extends AppCompatActivity implements IWebPageView {
     }
 
     private void initTitle() {
-        StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorTheme), 0);
+        StatusBarUtils.setColor(this, CommonUtils.getColor(R.color.colorTheme), 0);
         mProgressBar = (ProgressBar) findViewById(R.id.pb_progress);
         webView = (WebView) findViewById(R.id.webview_detail);
         videoFullView = (FrameLayout) findViewById(R.id.video_fullView);

@@ -1,5 +1,7 @@
 package com.an.better.netease.cloud.music.douban.viewholder;
 
+import android.view.View;
+
 import com.an.better.netease.cloud.music.databinding.ItemListDoubanBinding;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.trident.beyond.listener.OnItemClickListener;
@@ -19,6 +21,16 @@ public class MovieViewHolder extends BaseVdbViewHolder<SubjectsBean, ItemListDou
     @Override
     public void bind(SubjectsBean cellModel, int position) {
         super.bind(cellModel, position);
+
+        binding.ivOnePhoto.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(binding.ivOnePhoto, cellModel, position);
+                }
+            }
+        });
 
         binding.setSubjectsBean(cellModel);
         binding.executePendingBindings();

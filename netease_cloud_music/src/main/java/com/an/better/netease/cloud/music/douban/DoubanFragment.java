@@ -1,6 +1,7 @@
 package com.an.better.netease.cloud.music.douban;
 
 import android.view.View;
+import android.widget.ImageView;
 
 import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
@@ -44,9 +45,8 @@ public class DoubanFragment extends BaseListFragment<DoubanListRequest, DoubanLi
         if(data instanceof HotMovieTitle) {
 
         } else if(data instanceof SubjectsBean) {
-
+            MovieDetailActivity.start(getActivity(), (SubjectsBean)data, (ImageView)view);
         }
-
     }
 
 }

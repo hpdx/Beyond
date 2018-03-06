@@ -30,6 +30,9 @@ public interface ApiUrls {
     // https://api.douban.com/v2/movie/in_theaters
     String DOUBAN_HOT_MOVIE_URL = "v2/movie/in_theaters";
 
+    // 获取电影详情
+    // https://api.douban.com/v2/movie/subject/26861685
+    String MOVIE_DETAIL_URL = "v2/movie/subject";
 
 
 }

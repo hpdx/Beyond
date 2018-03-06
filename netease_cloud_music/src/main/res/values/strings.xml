@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">netease_cloud_music</string>
     <string name="actionbar_search">搜索</string>
+    <string name="actionbar_more">更多信息</string>
+
     <string name="no_name">佚名</string>
     <string name="string_rating">评分：</string>
     <string name="string_rating_num">人评分</string>
@@ -9,4 +11,8 @@
     <string name="actionbar_webview_share">分享到</string>
     <string name="actionbar_webview_cope">复制链接</string>
     <string name="actionbar_webview_open">打开链接</string>
+
+    <string name="transition_movie_img">transition_movie_img</string>
+    <string name="transition_news_img">transition_news_img</string>
+    <string name="transition_book_img">transition_book_img</string>
 </resources>

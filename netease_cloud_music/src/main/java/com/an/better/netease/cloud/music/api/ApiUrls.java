@@ -34,5 +34,8 @@ public interface ApiUrls {
     // https://api.douban.com/v2/movie/subject/26861685
     String MOVIE_DETAIL_URL = "v2/movie/subject";
 
+    // 获取豆瓣电影top250
+    // https://api.douban.com/v2/movie/top250?start=0&count=20
+    String MOVIE_TOP_250_URL = "v2/movie/top250";
 
 }

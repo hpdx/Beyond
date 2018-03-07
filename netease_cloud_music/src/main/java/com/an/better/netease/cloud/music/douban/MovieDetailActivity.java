@@ -35,6 +35,7 @@ import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
 import com.an.better.netease.cloud.music.utils.CommonUtils;
 import com.an.better.netease.cloud.music.utils.Utils;
+import com.an.better.netease.cloud.music.webview.WebViewActivity;
 import com.anbetter.log.MLog;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -54,11 +55,6 @@ import java.util.ArrayList;
 
 public class MovieDetailActivity extends AppCompatActivity implements OnItemClickListener<CastsBean> {
 
-    private FrameLayout title_container;
-    private FrameLayout header_container;
-    private FrameLayout container;
-    private NestedScrollView nested_scroll_view;
-
     private HeaderTitleBarBinding bindingTitleView;
     private MovieDetailHeaderBinding bindingHeaderView;
     private MovieDetailContentBinding bindingContentView;
@@ -74,10 +70,10 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
 
-        title_container = findViewById(R.id.title_container);
-        header_container = findViewById(R.id.header_container);
-        container = findViewById(R.id.container);
-        nested_scroll_view = findViewById(R.id.nested_scroll_view);
+        FrameLayout title_container = findViewById(R.id.title_container);
+        FrameLayout header_container = findViewById(R.id.header_container);
+        FrameLayout container = findViewById(R.id.container);
+        NestedScrollView nested_scroll_view = findViewById(R.id.nested_scroll_view);
 
         LayoutInflater layoutInflater = getLayoutInflater();
         bindingTitleView = HeaderTitleBarBinding.inflate(layoutInflater, null, false);
@@ -186,8 +182,6 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
     protected void initSlideShapeTheme() {
         // toolbar 的高
         int toolbarHeight = bindingTitleView.tbBaseTitle.getLayoutParams().height;
-        MLog.i("toolbarHeight = " + toolbarHeight);
-
         final int headerBgHeight = toolbarHeight + StatusBarUtils.getStatusBarHeight(this);
         MLog.i("headerBgHeight = " + headerBgHeight);
 
@@ -300,7 +294,7 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
 
     @Override
     public void onItemClick(View view, CastsBean data, int position) {
-
+        WebViewActivity.loadUrl(MovieDetailActivity.this, data.alt, "加载中...");
     }
 
 }

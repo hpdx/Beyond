@@ -41,6 +41,10 @@
         <activity
             android:name=".webview.WebViewActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".douban.HotMovieTop250Activity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

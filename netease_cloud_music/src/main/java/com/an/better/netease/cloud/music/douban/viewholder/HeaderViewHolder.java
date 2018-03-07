@@ -22,6 +22,17 @@ public class HeaderViewHolder extends BaseViewHolder<HotMovieTitle> {
     @Override
     public void bind(HotMovieTitle cellModel, int position) {
         super.bind(cellModel, position);
+
+       itemView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(mOnItemClickListener != null) {
+                    mOnItemClickListener.onItemClick(itemView, cellModel, position);
+                }
+            }
+        });
+
         ImageView imageView = findViewById(R.id.iv_img);
         Glide.with(mContext)
                 .load(cellModel.icon)

@@ -78,4 +78,17 @@ public class Apis {
         new OKHttpRequest<>(builder.toString(), listener, MovieDetailInfo.class).enqueue();
     }
 
+    /**
+     * 获取豆瓣电影top250
+     * @param start
+     * @param listener
+     */
+    public static void getMovieTop250(int start, ResponseListener<HotMovieBlock> listener) {
+        Uri.Builder builder = Uri.withAppendedPath(Uri.parse(ApiUrls.DOUBAN_BASE_URL),
+                ApiUrls.MOVIE_TOP_250_URL).buildUpon();
+        builder.appendQueryParameter("start", String.valueOf(start));
+        builder.appendQueryParameter("count", String.valueOf(20));
+        new OKHttpRequest<>(builder.toString(), listener, HotMovieBlock.class).enqueue();
+    }
+
 }

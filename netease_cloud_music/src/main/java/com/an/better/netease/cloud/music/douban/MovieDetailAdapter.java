@@ -2,6 +2,7 @@ package com.an.better.netease.cloud.music.douban;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.databinding.ItemMovieDetailBinding;
@@ -41,6 +42,16 @@ public class MovieDetailAdapter extends BaseAdapter<CastsBean> {
         @Override
         public void bind(CastsBean cellModel, int position) {
             super.bind(cellModel, position);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mOnItemClickListener != null) {
+                        mOnItemClickListener.onItemClick(itemView, cellModel, position);
+                    }
+                }
+            });
+
             binding.setCastsBean(cellModel);
             binding.executePendingBindings();
         }

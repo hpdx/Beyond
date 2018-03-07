@@ -43,8 +43,8 @@ public class DoubanFragment extends BaseListFragment<DoubanListRequest, DoubanLi
     public void onItemClick(View view, IModel data, int position) {
         MLog.i("onItemClick position = " + position);
         if(data instanceof HotMovieTitle) {
-
-        } else if(data instanceof SubjectsBean) {
+            HotMovieTop250Activity.start(getActivity());
+        } else if(data instanceof SubjectsBean && view instanceof ImageView) {
             MovieDetailActivity.start(getActivity(), (SubjectsBean)data, (ImageView)view);
         }
     }

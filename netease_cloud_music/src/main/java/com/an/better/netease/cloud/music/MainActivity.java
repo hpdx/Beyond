@@ -19,12 +19,11 @@ import com.an.better.netease.cloud.music.databinding.ActivityMainBinding;
 import com.an.better.netease.cloud.music.douban.DoubanFragment;
 import com.an.better.netease.cloud.music.gank.GankFragment;
 import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
-import com.trident.beyond.host.PageFragmentHost;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
-        implements PageFragmentHost, View.OnClickListener, ViewPager.OnPageChangeListener {
+        implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     private ActivityMainBinding mBinding;
 
@@ -59,9 +58,7 @@ public class MainActivity extends AppCompatActivity
         MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragmentList);
         mBinding.vpContent.setAdapter(adapter);
         mBinding.vpContent.addOnPageChangeListener(this);
-
-        // 设置ViewPager最大缓存的页面个数(cpu消耗少)
-//        mBinding.vpContent.setOffscreenPageLimit(2);
+        mBinding.vpContent.setOffscreenPageLimit(2);
 
         // 默认选中第一项
         mBinding.ivTitleGank.setSelected(true);
@@ -173,117 +170,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onPageScrollStateChanged(int state) {
 
-    }
-
-
-
-
-
-
-
-    @Override
-    public void toggleActionBar(boolean visible) {
-
-    }
-
-    @Override
-    public void setActionBarTitle(CharSequence title) {
-
-    }
-
-    @Override
-    public void setActionBarImageTitle(int resId) {
-
-    }
-
-    @Override
-    public void displayActionBarBack(boolean displayBack) {
-
-    }
-
-    @Override
-    public void setHomeAsUpIndicator(int resId) {
-
-    }
-
-    @Override
-    public void displayActionBarLeftText(CharSequence title, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void displayActionBarRightText(CharSequence title, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void displayActionBarLeftText(CharSequence title, int resId, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void displayActionBarRightText(CharSequence title, int resId, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void displayActionBarRightIconText(CharSequence title, int resId, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void displayActionBarRightIcon(int resId, View.OnClickListener listener) {
-
-    }
-
-    @Override
-    public void setActionBarLeftTextColor(int resId) {
-
-    }
-
-    @Override
-    public void setActionBarRightTextColor(int resId) {
-
-    }
-
-    @Override
-    public void setTitleOnClickListener(View.OnClickListener onClickListener) {
-
-    }
-
-    @Override
-    public void showGlobalBannerTips(String message) {
-
-    }
-
-    @Override
-    public void showFullscreen() {
-
-    }
-
-    @Override
-    public void clearFullscreen() {
-
-    }
-
-    @Override
-    public void setSoftInputMode(int mode) {
-
-    }
-
-    @Override
-    public String getCurrentPage() {
-        return null;
-    }
-
-    @Override
-    public Fragment getCurrentHomePage() {
-        return null;
-    }
-
-    @Override
-    public int getBackStackCount() {
-        return 0;
     }
 
 }

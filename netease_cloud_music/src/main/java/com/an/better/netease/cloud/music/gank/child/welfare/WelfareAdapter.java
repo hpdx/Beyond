@@ -5,6 +5,7 @@ import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.databinding.ItemWelfareBinding;
 import com.trident.beyond.adapter.BaseListPagingAdapter;
+import com.trident.beyond.listener.OnItemClickListener;
 
 /**
  *
@@ -14,13 +15,13 @@ import com.trident.beyond.adapter.BaseListPagingAdapter;
 
 public class WelfareAdapter extends BaseListPagingAdapter<WelfarePagingListRequest> {
 
-    public WelfareAdapter(WelfarePagingListRequest baseList) {
-        super(baseList);
+    public WelfareAdapter(WelfarePagingListRequest baseList, OnItemClickListener listener) {
+        super(baseList, listener);
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateBLMViewHolder(ViewGroup parent, int viewType) {
-        return new WelfareViewHolder(ItemWelfareBinding.inflate(mLayoutInflater, parent, false));
+        return new WelfareViewHolder(ItemWelfareBinding.inflate(mLayoutInflater, parent, false), mOnItemClickListener);
     }
 
     @Override

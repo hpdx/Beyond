@@ -9,6 +9,7 @@ import com.an.better.netease.cloud.music.utils.CommonUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.facebook.fresco.helper.utils.DensityUtil;
+import com.trident.beyond.listener.OnItemClickListener;
 import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 /**
@@ -18,8 +19,8 @@ import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 public class WelfareViewHolder extends BaseVdbViewHolder<GanKInfo, ItemWelfareBinding> {
 
-    public WelfareViewHolder(ItemWelfareBinding viewDataBinding) {
-        super(viewDataBinding);
+    public WelfareViewHolder(ItemWelfareBinding viewDataBinding, OnItemClickListener<GanKInfo> listener) {
+        super(viewDataBinding, listener);
     }
 
     @Override

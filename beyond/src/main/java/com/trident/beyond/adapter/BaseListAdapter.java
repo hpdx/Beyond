@@ -28,9 +28,8 @@ public abstract class BaseListAdapter<M extends BaseListRequest<?, ?>> extends R
     }
 
     public BaseListAdapter(M baseList, OnItemClickListener listener) {
-        this.mList = baseList;
+        this(baseList);
         mOnItemClickListener = listener;
-        setFooterViewType();
     }
 
     public void updateAdapterData(M baseList) {

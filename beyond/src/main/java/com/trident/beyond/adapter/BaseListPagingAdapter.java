@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.trident.beyond.R;
+import com.trident.beyond.listener.OnItemClickListener;
 import com.trident.beyond.model.BasePaginatedListRequest;
 import com.trident.beyond.viewholder.ErrorFooterViewHolder;
 import com.trident.beyond.viewholder.FooterNoneViewHolder;
@@ -23,6 +24,10 @@ public abstract class BaseListPagingAdapter<M extends BasePaginatedListRequest<?
 
     public BaseListPagingAdapter(M baseList) {
         super(baseList);
+    }
+
+    public BaseListPagingAdapter(M baseList, OnItemClickListener listener) {
+        super(baseList, listener);
     }
 
     @Override

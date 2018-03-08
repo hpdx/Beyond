@@ -68,7 +68,9 @@ public abstract class MvvmPageFragment<M, V extends MvvmBaseView<M>, VM extends 
         }
         restoreState(mSavedInstanceState);
 
-        rebindActionBar();
+        if(mPageFragmentHost != null) {
+            rebindActionBar();
+        }
     }
 
     /**

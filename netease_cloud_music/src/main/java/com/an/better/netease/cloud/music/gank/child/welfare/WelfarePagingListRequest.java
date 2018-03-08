@@ -8,6 +8,7 @@ import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.trident.beyond.model.BasePaginatedListRequest;
 import com.trident.dating.libcommon.IRequest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,6 +20,7 @@ public class WelfarePagingListRequest extends BasePaginatedListRequest<GankDataB
 
     private static final int PAGE_SIZE = 20;
     private int page = 1;
+    private ArrayList<String> photos;
 
     @Override
     public String getUrl() {
@@ -42,7 +44,20 @@ public class WelfarePagingListRequest extends BasePaginatedListRequest<GankDataB
 
     @Override
     protected List<GanKInfo> getItemsFromResponse(GankDataBlock response) {
+        photos = new ArrayList<>();
+
+        List<GanKInfo> gankList = response.results;
+        int size = gankList.size();
+        for (int i = 0; i < size; i++) {
+            GanKInfo ganKInfo = gankList.get(i);
+            photos.add(ganKInfo.url);
+        }
+
         return response.results;
+    }
+
+    public ArrayList<String> getPhotos() {
+        return photos;
     }
 
 }

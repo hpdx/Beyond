@@ -5,14 +5,18 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
+import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareAdapter;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareListView;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfarePagingListRequest;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareViewModel;
 import com.anbetter.log.MLog;
+import com.facebook.fresco.helper.photoview.PictureBrowse;
 import com.trident.beyond.adapter.BaseListAdapter;
 import com.trident.beyond.fragment.BasePagingListFragment;
+import com.trident.beyond.listener.OnItemClickListener;
 
 /**
  * 福利
@@ -21,7 +25,7 @@ import com.trident.beyond.fragment.BasePagingListFragment;
  */
 
 public class WelfareFragment extends BasePagingListFragment<WelfarePagingListRequest,
-        WelfareListView, WelfareViewModel> implements WelfareListView {
+        WelfareListView, WelfareViewModel> implements WelfareListView, OnItemClickListener<GanKInfo> {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +46,7 @@ public class WelfareFragment extends BasePagingListFragment<WelfarePagingListReq
 
     @Override
     protected BaseListAdapter createAdapter(WelfarePagingListRequest data) {
-        return new WelfareAdapter(data);
+        return new WelfareAdapter(data, this);
     }
 
     @Override
@@ -54,6 +58,14 @@ public class WelfareFragment extends BasePagingListFragment<WelfarePagingListReq
     public void onDestroy() {
         super.onDestroy();
         MLog.i("WelfareFragment--->onDestroy");
+    }
+
+    @Override
+    public void onItemClick(View view, GanKInfo data, int position) {
+        PictureBrowse.newBuilder(mContext)
+                .setPhotoStringList(mList.getPhotos())
+                .setCurrentPosition(position)
+                .start();
     }
 
 }

@@ -72,6 +72,7 @@ public class GankFragment extends Fragment {
         // 注意使用的是：getChildFragmentManager
         myAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), mFragments, mTitleList);
         vp_gank.setAdapter(myAdapter);
+        vp_gank.setOffscreenPageLimit(2);
 
         tab_gank.setTabMode(TabLayout.MODE_FIXED);
         tab_gank.setupWithViewPager(vp_gank);

@@ -3,6 +3,7 @@ package com.an.better.netease.cloud.music.douban;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -64,6 +65,7 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
 
     // 滑动多少距离后标题不透明
     private int slidingDistance;
+    private AnimationDrawable mAnimationDrawable;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -114,11 +116,13 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
         bindingHeaderView.setSubjectsBean(mSubjectsBean);
         bindingHeaderView.executePendingBindings();
 
+        showLoading();
         Apis.getMovieDetail(String.valueOf(mSubjectsBean.id),
                 new ResponseListener<MovieDetailInfo>() {
             @Override
             public void onResponse(MovieDetailInfo response) {
                 mMovieDetailInfo = response;
+                showContentView();
 
                 // 上映日期
                 bindingHeaderView.tvOneDay.setText(String.format("上映日期：%s", mMovieDetailInfo.year));
@@ -295,6 +299,29 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
     @Override
     public void onItemClick(View view, CastsBean data, int position) {
         WebViewActivity.loadUrl(MovieDetailActivity.this, data.alt, "加载中...");
+    }
+
+    private void showLoading() {
+        // 加载动画
+        bindingContentView.llProgressBar.setVisibility(View.VISIBLE);
+        bindingContentView.llContent.setVisibility(View.GONE);
+        ImageView img = findViewById(R.id.img_progress);
+        mAnimationDrawable = (AnimationDrawable) img.getDrawable();
+        // 默认进入页面就开启动画
+        if (!mAnimationDrawable.isRunning()) {
+            mAnimationDrawable.start();
+        }
+    }
+
+    private void showContentView() {
+        // 停止动画
+        if ( bindingContentView.llProgressBar.getVisibility() == View.VISIBLE) {
+            bindingContentView.llProgressBar.setVisibility(View.GONE);
+            bindingContentView.llContent.setVisibility(View.VISIBLE);
+            if (mAnimationDrawable.isRunning()) {
+                mAnimationDrawable.stop();
+            }
+        }
     }
 
 }

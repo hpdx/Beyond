@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.douban;
+package com.an.better.netease.cloud.music.douban.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 
 import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.api.Apis;
+import com.an.better.netease.cloud.music.douban.adapter.DoubanTopListAdapter;
 import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.jcodecraeer.xrecyclerview.CustomFooterViewCallBack;

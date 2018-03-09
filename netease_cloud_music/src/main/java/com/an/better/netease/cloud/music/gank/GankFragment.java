@@ -10,11 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.R;
-import com.an.better.netease.cloud.music.adapter.MyFragmentPagerAdapter;
 import com.an.better.netease.cloud.music.gank.child.CustomFragment;
 import com.an.better.netease.cloud.music.gank.child.EverydayFragment;
 import com.an.better.netease.cloud.music.gank.child.WelfareFragment;
 import com.anbetter.log.MLog;
+import com.trident.beyond.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
 
@@ -29,7 +29,7 @@ public class GankFragment extends Fragment {
 
     private TabLayout tab_gank;
     private ViewPager vp_gank;
-    MyFragmentPagerAdapter myAdapter;
+    FragmentAdapter myAdapter;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,7 +70,7 @@ public class GankFragment extends Fragment {
         MLog.i("GankFragment--->onActivityCreated");
 
         // 注意使用的是：getChildFragmentManager
-        myAdapter = new MyFragmentPagerAdapter(getChildFragmentManager(), mFragments, mTitleList);
+        myAdapter = new FragmentAdapter(getChildFragmentManager(), mFragments, mTitleList);
         vp_gank.setAdapter(myAdapter);
         vp_gank.setOffscreenPageLimit(2);
 

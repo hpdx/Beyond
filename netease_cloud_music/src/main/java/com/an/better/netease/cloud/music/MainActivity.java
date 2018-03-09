@@ -13,12 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.an.better.netease.cloud.music.adapter.MyFragmentPagerAdapter;
 import com.an.better.netease.cloud.music.book.BookFragment;
 import com.an.better.netease.cloud.music.databinding.ActivityMainBinding;
-import com.an.better.netease.cloud.music.douban.DoubanFragment;
+import com.an.better.netease.cloud.music.douban.hot.DoubanFragment;
 import com.an.better.netease.cloud.music.gank.GankFragment;
 import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
+import com.trident.beyond.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity
         mFragmentList.add(new BookFragment());
 
         // 注意使用的是：getSupportFragmentManager
-        MyFragmentPagerAdapter adapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragmentList);
+        FragmentAdapter adapter = new FragmentAdapter(getSupportFragmentManager(), mFragmentList);
         mBinding.vpContent.setAdapter(adapter);
         mBinding.vpContent.addOnPageChangeListener(this);
         mBinding.vpContent.setOffscreenPageLimit(2);

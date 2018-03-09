@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.douban;
+package com.an.better.netease.cloud.music.douban.hot;
 
 import android.net.Uri;
 import android.text.TextUtils;

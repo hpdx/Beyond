@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.douban;
+package com.an.better.netease.cloud.music.douban.hot;
 
 import com.trident.beyond.viewmodel.BaseListViewModel;
 

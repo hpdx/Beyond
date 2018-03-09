@@ -1,10 +1,11 @@
-package com.an.better.netease.cloud.music.douban;
+package com.an.better.netease.cloud.music.douban.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.databinding.ItemListDoubanBinding;
+import com.an.better.netease.cloud.music.douban.hot.DoubanListRequest;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.an.better.netease.cloud.music.douban.viewholder.HeaderViewHolder;

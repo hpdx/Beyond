@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.adapter;
+package com.trident.beyond.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,39 +8,34 @@ import android.view.ViewGroup;
 import java.util.List;
 
 /**
- * Created by jingbin on 2016/12/6.
+ *
+ * Created by android_ls on 2018/1/26.
  */
 
-public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
+public class FragmentAdapter extends FragmentPagerAdapter {
 
-    private List<?> mFragment;
+    private List<Fragment> mFragments;
     private List<String> mTitleList;
 
-    /**
-     * 普通，主页使用
-     */
-    public MyFragmentPagerAdapter(FragmentManager fm, List<?> mFragment) {
+    public FragmentAdapter(FragmentManager fm, List<Fragment> mFragment) {
         super(fm);
-        this.mFragment = mFragment;
+        this.mFragments = mFragment;
     }
 
-    /**
-     * 接收首页传递的标题
-     */
-    public MyFragmentPagerAdapter(FragmentManager fm, List<?> mFragment, List<String> mTitleList) {
+    public FragmentAdapter(FragmentManager fm, List<Fragment> fragments, List<String> titleList) {
         super(fm);
-        this.mFragment = mFragment;
-        this.mTitleList = mTitleList;
+        this.mFragments = fragments;
+        this.mTitleList = titleList;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return (Fragment) mFragment.get(position);
+        return mFragments.get(position);
     }
 
     @Override
     public int getCount() {
-        return mFragment.size();
+        return mFragments.size();
     }
 
     @Override
@@ -48,10 +43,6 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
         super.destroyItem(container, position, object);
     }
 
-    /**
-     * 首页显示title，每日推荐等..
-     * 若有问题，移到对应单独页面
-     */
     @Override
     public CharSequence getPageTitle(int position) {
         if (mTitleList != null) {

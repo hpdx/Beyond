@@ -30,6 +30,7 @@ import com.an.better.netease.cloud.music.binding.adapter.BlurTransformation;
 import com.an.better.netease.cloud.music.databinding.HeaderTitleBarBinding;
 import com.an.better.netease.cloud.music.databinding.MovieDetailContentBinding;
 import com.an.better.netease.cloud.music.databinding.MovieDetailHeaderBinding;
+import com.an.better.netease.cloud.music.douban.adapter.MovieDetailAdapter;
 import com.an.better.netease.cloud.music.douban.model.CastsBean;
 import com.an.better.netease.cloud.music.douban.model.MovieDetailInfo;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;

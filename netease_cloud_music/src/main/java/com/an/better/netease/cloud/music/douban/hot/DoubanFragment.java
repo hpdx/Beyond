@@ -1,9 +1,12 @@
-package com.an.better.netease.cloud.music.douban;
+package com.an.better.netease.cloud.music.douban.hot;
 
 import android.view.View;
 import android.widget.ImageView;
 
 import com.an.better.netease.cloud.music.R;
+import com.an.better.netease.cloud.music.douban.HotMovieTop250Activity;
+import com.an.better.netease.cloud.music.douban.MovieDetailActivity;
+import com.an.better.netease.cloud.music.douban.adapter.DoubanListAdapter;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.anbetter.log.MLog;

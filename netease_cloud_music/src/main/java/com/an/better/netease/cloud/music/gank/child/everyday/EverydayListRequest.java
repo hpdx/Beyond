@@ -10,7 +10,6 @@ import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBlock;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCategory;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
-import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.FocusBean;
 import com.an.better.netease.cloud.music.utils.Utils;
 import com.anbetter.log.MLog;
 import com.trident.beyond.model.BaseListRequest;
@@ -36,12 +35,6 @@ public class EverydayListRequest extends BaseListRequest<GanKDayBlock, Section<I
     public static final int VIEW_TYPE_APP = 8;
     public static final int VIEW_TYPE_ANDROID = 9;
 
-    private FocusBean focusBean;
-
-    public void setFocusBean(FocusBean focusBean) {
-        this.focusBean = focusBean;
-    }
-
     @Override
     public String getUrl() {
         return Uri.withAppendedPath(Uri.parse(ApiUrls.GANK_BASE_URL),
@@ -57,8 +50,12 @@ public class EverydayListRequest extends BaseListRequest<GanKDayBlock, Section<I
     protected List<Section<Integer, Object>> getItemsFromResponse(GanKDayBlock response) {
         GanKDayInfo ganKDayInfo = response.results;
         ArrayList<Section<Integer, Object>> cellMapping = new ArrayList<>();
-        if (focusBean != null) {
-            cellMapping.add(new Section<>(EverydayListRequest.VIEW_TYPE_BANNER, focusBean));
+
+        // 福利
+        if (ganKDayInfo.welfare != null && ganKDayInfo.welfare.size() > 0) {
+//            cellMapping.add(new Section<>(VIEW_TYPE_BLOCK_TITLE, new GanKDayCategory("福利", R.drawable.home_title_meizi)));
+            GanKInfo ganKInfo = ganKDayInfo.welfare.get(0);
+            cellMapping.add(new Section<>(VIEW_TYPE_MEIZI, new GanKDayBanner(ganKInfo.url)));
         }
 
         // iOS
@@ -69,13 +66,6 @@ public class EverydayListRequest extends BaseListRequest<GanKDayBlock, Section<I
                 ganKInfo.imageUrl = Utils.getTwoImageUrl();
             }
             cellMapping.add(new Section<>(VIEW_TYPE_IOS_BLOCK, iosShows));
-        }
-
-        // 福利
-        if (ganKDayInfo.welfare != null && ganKDayInfo.welfare.size() > 0) {
-            cellMapping.add(new Section<>(VIEW_TYPE_BLOCK_TITLE, new GanKDayCategory("福利", R.drawable.home_title_meizi)));
-            GanKInfo ganKInfo = ganKDayInfo.welfare.get(0);
-            cellMapping.add(new Section<>(VIEW_TYPE_MEIZI, new GanKDayBanner(ganKInfo.url)));
         }
 
         // android

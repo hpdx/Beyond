@@ -17,6 +17,7 @@ public interface ApiUrls {
     String TING_BASE_URL = "https://tingapi.ting.baidu.com/v1/restserver/";
 
     // 首页轮播图
+    // https://tingapi.ting.baidu.com/v1/restserver/ting?from=android&version=5.8.1.0&channel=ppzs&operator=3&method=baidu.ting.plaza.index&cuid=89CF1E1A06826F9AB95A34DC0F6AAA14
     String HOME_BANNER_URL = "ting?from=android&version=5.8.1.0&channel=ppzs&operator=3&method=baidu.ting.plaza.index&cuid=89CF1E1A06826F9AB95A34DC0F6AAA14";
 
     // 每日数据：https://gank.io/api/day/年/月/日

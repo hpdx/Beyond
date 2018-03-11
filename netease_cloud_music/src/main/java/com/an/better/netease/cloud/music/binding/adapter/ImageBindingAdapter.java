@@ -15,7 +15,7 @@ import com.facebook.fresco.helper.utils.DensityUtil;
 
 public class ImageBindingAdapter {
 
-    @BindingAdapter({"url"})
+    @BindingAdapter({"android:url"})
     public static void loadImage(ImageView imageView, String url) {
         Glide.with(imageView.getContext())
                 .load(url)

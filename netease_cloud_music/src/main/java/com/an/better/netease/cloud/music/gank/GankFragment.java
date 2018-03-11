@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.R;
-import com.an.better.netease.cloud.music.gank.child.CustomFragment;
 import com.an.better.netease.cloud.music.gank.child.EverydayFragment;
+import com.an.better.netease.cloud.music.gank.child.MusicHomeFragment;
 import com.an.better.netease.cloud.music.gank.child.WelfareFragment;
 import com.anbetter.log.MLog;
 import com.trident.beyond.adapter.FragmentAdapter;
@@ -36,16 +36,16 @@ public class GankFragment extends Fragment {
         super.onCreate(savedInstanceState);
         MLog.i("GankFragment--->onCreate");
 
-        mTitleList = new ArrayList<>(4);
-        mFragments = new ArrayList<>(4);
+        mTitleList = new ArrayList<>();
+        mFragments = new ArrayList<>();
 
-        mTitleList.add("每日推荐");
-        mTitleList.add("福利");
-        mTitleList.add("干货订制");
+        mTitleList.add("百度音乐");
+        mTitleList.add("Gank.io");
+        mTitleList.add("Gank妹子");
 
+        mFragments.add(new MusicHomeFragment());
         mFragments.add(new EverydayFragment());
         mFragments.add(new WelfareFragment());
-        mFragments.add(new CustomFragment());
     }
 
     @Nullable

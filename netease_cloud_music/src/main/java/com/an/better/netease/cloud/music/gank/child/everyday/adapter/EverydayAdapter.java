@@ -3,6 +3,7 @@ package com.an.better.netease.cloud.music.gank.child.everyday.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.an.better.netease.cloud.music.databinding.ItemEverydayBannerBinding;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayGridBinding;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayOneBinding;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayTitleBinding;
@@ -11,7 +12,7 @@ import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEvent
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBanner;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCategory;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
-import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.FocusBean;
+import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.GridViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.HomeBannerViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.OneViewHolder;
@@ -46,7 +47,7 @@ public class EverydayAdapter extends BaseListAdapter<EverydayListRequest> {
             case EverydayListRequest.VIEW_TYPE_BLOCK_TITLE:
                 return new TitleViewHolder(ItemEverydayTitleBinding.inflate(mLayoutInflater, parent, false));
             case EverydayListRequest.VIEW_TYPE_MEIZI:
-                return new OneViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
+                return new OneViewHolder(ItemEverydayBannerBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             case EverydayListRequest.VIEW_TYPE_REST_MOVIE:
                 return new RestMovieViewHolder(ItemEverydayOneBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             case EverydayListRequest.VIEW_TYPE_ANDROID:

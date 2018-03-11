@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.an.better.netease.cloud.music.gank.child.music.model.ResultBean"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_three_one_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="7dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_three_one_one"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@drawable/img_one_bi_one"
+            android:scaleType="centerCrop"
+            android:url="@{model.pic}"/>
+
+        <TextView
+            android:id="@+id/tv_three_one_one_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{model.title}"
+            android:textColor="@color/colorContent"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</layout>

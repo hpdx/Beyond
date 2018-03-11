@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
-import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.BannerBean;
-import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.FocusBean;
+import com.an.better.netease.cloud.music.gank.child.music.model.BannerBean;
+import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.utils.GlideImageLoader;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;

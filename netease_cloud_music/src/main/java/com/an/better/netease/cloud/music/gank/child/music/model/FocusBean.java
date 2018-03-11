@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.gank.child.everyday.model.ting;
+package com.an.better.netease.cloud.music.gank.child.music.model;
 
 import com.trident.beyond.model.IModel;
 

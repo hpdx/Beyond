@@ -5,7 +5,7 @@ import android.net.Uri;
 import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
 import com.an.better.netease.cloud.music.douban.model.MovieDetailInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBlock;
-import com.an.better.netease.cloud.music.gank.child.everyday.model.ting.TingBlock;
+import com.an.better.netease.cloud.music.gank.child.music.model.TingBlock;
 import com.an.better.netease.cloud.music.gank.child.welfare.GankDataBlock;
 import com.trident.dating.libcommon.IRequest;
 import com.trident.dating.libcommon.listener.ResponseListener;
@@ -25,6 +25,16 @@ import com.trident.dating.libnetwork.okhttp.OKHttpRequest;
  */
 
 public class Apis {
+
+    /**
+     * 百度音乐首页数据
+     * @param listener
+     */
+    public static IRequest getBaiduMusic(ResponseListener<TingBlock> listener) {
+        String url = Uri.withAppendedPath(Uri.parse(ApiUrls.TING_BASE_URL),
+                ApiUrls.HOME_BANNER_URL).buildUpon().toString();
+        return new OKHttpRequest<>(url, listener, TingBlock.class).enqueue();
+    }
 
     /**
      * 首页轮播图

@@ -77,10 +77,7 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mLayoutManager = createLayoutManager();
         mRecyclerView.setLayoutManager(mLayoutManager);
-
-        setRefreshEnabled();
-        addItemDecoration();
-        decorateRecyclerView();
+        addItemDecoration(mRecyclerView);
 
         if (showBackToTopView()) {
             mBackToTopView = (BackToTopView) view.findViewById(R.id.up_to_top);
@@ -108,7 +105,7 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
     /***
      * Cell 之间的分割线
      */
-    protected void addItemDecoration() {
+    protected void addItemDecoration(RecyclerView recyclerView) {
 
     }
 
@@ -155,13 +152,11 @@ public abstract class BaseListFragment<M extends BaseListRequest<?, ?>, V extend
     }
 
     /**
-     * 若想禁用下拉刷新功能，请重写此方法
-     * 示例：
-     * mPtrFrameLayout.setEnabled(false);
+     * 禁用下拉刷新功能
      */
-    protected void setRefreshEnabled() {
+    public void setRefreshEnabled(boolean enabled) {
         if (mPtrFrameLayout != null) {
-            mPtrFrameLayout.setEnabled(true);
+            mPtrFrameLayout.setEnabled(enabled);
         }
     }
 

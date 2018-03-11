@@ -55,6 +55,12 @@ public class WelfareFragment extends BasePagingListFragment<WelfarePagingListReq
     }
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        setRefreshEnabled(true);
+    }
+
+    @Override
     public void onDestroy() {
         super.onDestroy();
         MLog.i("WelfareFragment--->onDestroy");

@@ -1,4 +1,4 @@
-package com.an.better.netease.cloud.music.gank.child.everyday.model.ting;
+package com.an.better.netease.cloud.music.gank.child.music.model;
 
 import java.util.List;
 
@@ -55,36 +55,6 @@ public class TingBlock {
         public Mod27Bean mod_27;
         public SceneBean scene;
         public KingBean king;
-
-        public static class Mix1Bean {
-            /**
-             * error_code : 22000
-             * result : [{"desc":"2月新歌速递","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15181581484483ae2b915198ce2155f3c0b4628ab9.jpg","type_id":"519125943","type":0,"title":"新歌抢鲜听","tip_type":0,"author":"2月新歌速递"},{"desc":"庄妮","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1518328757fb818cf606a12b62c31f117b9e805800.jpg","type_id":"572932393","type":2,"title":"离不开","tip_type":0,"author":"庄妮"},{"desc":"龙梅子","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1518320774f3fe20a6832527015311d3aab772d704.jpg","type_id":"572927031","type":2,"title":"水倒流","tip_type":0,"author":"龙梅子"},{"desc":"刘力扬","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_1518085506ce6b5612c2f271bab6fd68b1a581221c.jpg","type_id":"572588561","type":2,"title":"Work For Light","tip_type":0,"author":"刘力扬"},{"desc":"王蓉","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15181463563bd8fcc0d98c86fa453eb66fe5778f65.jpg","type_id":"572593172","type":2,"title":"红烧肉","tip_type":0,"author":"王蓉"},{"desc":"岳云鹏 ,郭麒麟","pic":"http://business.cdn.qianqian.com/qianqian/pic/bos_client_15180890849dbbadef583c3e67ecd5fc5a745ed362.jpg","type_id":"572589409","type":2,"title":"漂亮重要吗","tip_type":0,"author":"岳云鹏 ,郭麒麟"}]
-             */
-
-            public int error_code;
-            public List<ResultBean> result;
-
-            public static class ResultBean {
-                /**
-                 * desc : 2月新歌速递
-                 * pic : http://business.cdn.qianqian.com/qianqian/pic/bos_client_15181581484483ae2b915198ce2155f3c0b4628ab9.jpg
-                 * type_id : 519125943
-                 * type : 0
-                 * title : 新歌抢鲜听
-                 * tip_type : 0
-                 * author : 2月新歌速递
-                 */
-
-                public String desc;
-                public String pic;
-                public String type_id;
-                public int type;
-                public String title;
-                public int tip_type;
-                public String author;
-            }
-        }
 
         public static class Mod29Bean {
             /**
@@ -331,53 +301,7 @@ public class TingBlock {
              */
 
             public int error_code;
-            public List<ResultBeanXXXXXXXXXX> result;
-
-            public static class ResultBeanXXXXXXXXXX {
-                /**
-                 * resource_type_ext : 0
-                 * distribution : 0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000,0000000000
-                 * has_filmtv : 0
-                 * learn : 0
-                 * pic_premium : http://qukufile2.qianqian.com/data2/pic/4a727da29638db19630f32a2c3068d5e/567461044/567461044.jpg@s_1,w_500,h_500
-                 * album_id : 567461043
-                 * biaoshi :
-                 * si_proxycompany : TAIHE MUSIC GROUP
-                 * versions :
-                 * bitrate_fee : {"0":"0|0","1":"0|0"}
-                 * info :
-                 * copy_type : 1
-                 * album_title : 找回当初的我
-                 * method : 0
-                 * title : 找回当初的我（福利版）
-                 * song_id : 567478180
-                 * author : 瑶丫头
-                 * del_status : 0
-                 * korean_bb_song : 0
-                 * has_mv_mobile : 0
-                 */
-
-                public String resource_type_ext;
-                public String distribution;
-                public String has_filmtv;
-                public String learn;
-                public String pic_premium;
-                public String album_id;
-                public String biaoshi;
-                public String si_proxycompany;
-                public String versions;
-                public String bitrate_fee;
-                public String info;
-                public String copy_type;
-                public String album_title;
-                public String method;
-                public String title;
-                public String song_id;
-                public String author;
-                public String del_status;
-                public String korean_bb_song;
-                public String has_mv_mobile;
-            }
+            public List<MovieSongs> result;
         }
 
         public static class Mix2Bean {

@@ -37,16 +37,6 @@ public class Apis {
     }
 
     /**
-     * 首页轮播图
-     * @param listener
-     */
-    public static void getBanner(ResponseListener<TingBlock> listener) {
-        String url = Uri.withAppendedPath(Uri.parse(ApiUrls.TING_BASE_URL),
-                ApiUrls.HOME_BANNER_URL).buildUpon().toString();
-        new OKHttpRequest<>(url, listener, TingBlock.class).enqueue();
-    }
-
-    /**
      * 获取每天的干货
      * @param url
      * @param listener

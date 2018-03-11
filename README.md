@@ -13,6 +13,5 @@
 <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_03.jpg" width="270px"/>        <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_04.jpg" width="270px"/>
 
 ## Thanks
-GANK.IO
-https://github.com/youlookwhat/CloudReader
-......
+- http://gank.io
+- https://github.com/youlookwhat/CloudReader

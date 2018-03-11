@@ -1,4 +1,4 @@
-#Android App快速开发框架
+# Android App快速开发框架
 基于此框架可以快速开发出一款APP，不重复造轮子。
 
 ## 特性
@@ -8,7 +8,11 @@
 - 提供Tab页面的Base组件
 
 ## 基于该框架实现的Demo，运行后的截图
-<img src="https://github.com/hpdx/Beyond/blob/master/images/demo_01.jpg" width="270px"/>  <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_02.jpg" width="270px"/>
+<img src="https://github.com/hpdx/Beyond/blob/master/images/demo_01.jpg" width="270px"/>        <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_02.jpg" width="270px"/>
 
-<img src="https://github.com/hpdx/Beyond/blob/master/images/demo_03.jpg" width="270px"/>  <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_04.jpg" width="270px"/>
+<img src="https://github.com/hpdx/Beyond/blob/master/images/demo_03.jpg" width="270px"/>        <img src="https://github.com/hpdx/Beyond/blob/master/images/demo_04.jpg" width="270px"/>
 
+## Thanks
+GANK.IO
+https://github.com/youlookwhat/CloudReader
+......

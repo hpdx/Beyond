@@ -7,8 +7,8 @@ import com.an.better.netease.cloud.music.api.Apis;
 import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.Mix1Bean;
 import com.an.better.netease.cloud.music.gank.child.music.model.MovieSongs;
+import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.TingBlock;
-import com.anbetter.log.MLog;
 import com.trident.beyond.model.BaseListRequest;
 import com.trident.beyond.model.Section;
 import com.trident.dating.libcommon.IRequest;
@@ -25,7 +25,8 @@ public class MusicListRequest extends BaseListRequest<TingBlock, Section<Integer
 
     public static final int VIEW_TYPE_BANNER = 1;
     public static final int VIEW_TYPE_FIRST_PUBLISH = 2;
-    public static final int VIEW_TYPE_MOVIE_SONGS = 3;
+    public static final int VIEW_TYPE_SONG_MENU = 3;
+    public static final int VIEW_TYPE_MOVIE_SONGS = 4;
 
     @Override
     public String getUrl() {
@@ -56,6 +57,14 @@ public class MusicListRequest extends BaseListRequest<TingBlock, Section<Integer
         Mix1Bean mix1Bean = response.result.mix_1;
         if (mix1Bean != null) {
             cellMapping.add(new Section<>(MusicListRequest.VIEW_TYPE_FIRST_PUBLISH, mix1Bean));
+        }
+
+        // 歌单精选
+        if(response.result.diy != null) {
+            List<SongMenuBean> songMenuBeanList = response.result.diy.result;
+            if(songMenuBeanList != null && songMenuBeanList.size() > 0) {
+                cellMapping.add(new Section<>(MusicListRequest.VIEW_TYPE_SONG_MENU, songMenuBeanList));
+            }
         }
 
         // 影视歌曲

@@ -9,8 +9,10 @@ import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.HomeBann
 import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.Mix1Bean;
 import com.an.better.netease.cloud.music.gank.child.music.model.MovieSongs;
+import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.FirstPublishViewHolder;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.MovieSongsViewHolder;
+import com.an.better.netease.cloud.music.gank.child.music.viewholder.SongMenuViewHolder;
 import com.trident.beyond.adapter.BaseListAdapter;
 
 import java.util.List;
@@ -41,6 +43,8 @@ public class MusicHomeAdapter extends BaseListAdapter<MusicListRequest> {
                 return new FirstPublishViewHolder(FirstPublishBlockBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             case MusicListRequest.VIEW_TYPE_MOVIE_SONGS:
                 return new MovieSongsViewHolder(FirstPublishBlockBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
+            case MusicListRequest.VIEW_TYPE_SONG_MENU:
+                return new SongMenuViewHolder(FirstPublishBlockBinding.inflate(mLayoutInflater, parent, false), mEventHandler);
             default:
                 String unknown = "Unknown type for onCreateViewHolder" + viewType;
                 throw new IllegalStateException(unknown);
@@ -58,6 +62,9 @@ public class MusicHomeAdapter extends BaseListAdapter<MusicListRequest> {
                 break;
             case MusicListRequest.VIEW_TYPE_MOVIE_SONGS:
                 ((MovieSongsViewHolder) holder).bind((List<MovieSongs>) mList.getItems().get(position).second, position);
+                break;
+            case MusicListRequest.VIEW_TYPE_SONG_MENU:
+                ((SongMenuViewHolder) holder).bind((List<SongMenuBean>) mList.getItems().get(position).second, position);
                 break;
         }
     }

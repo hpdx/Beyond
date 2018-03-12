@@ -18,6 +18,7 @@ import com.an.better.netease.cloud.music.databinding.ActivityMainBinding;
 import com.an.better.netease.cloud.music.douban.hot.DoubanFragment;
 import com.an.better.netease.cloud.music.gank.GankFragment;
 import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
+import com.an.better.netease.cloud.music.webview.WebViewActivity;
 import com.trident.beyond.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
@@ -64,7 +65,8 @@ public class MainActivity extends AppCompatActivity
         mBinding.ivTitleGank.setSelected(true);
         mBinding.vpContent.setCurrentItem(0);
 
-        mBinding.navView.inflateHeaderView(R.layout.nav_header_main);
+        View menuView = mBinding.navView.inflateHeaderView(R.layout.nav_header_main);
+        menuView.findViewById(R.id.ll_nav_homepage).setOnClickListener(this);
 
     }
 
@@ -121,12 +123,9 @@ public class MainActivity extends AppCompatActivity
                     mBinding.vpContent.setCurrentItem(2);
                 }
                 break;
-//            case R.id.iv_avatar: // 头像进入GitHub
-//                WebViewActivity.loadUrl(v.getContext(),CommonUtils.getString(R.string.string_url_cloudreader),"CloudReader");
-//                break;
-//            case R.id.ll_nav_exit:// 退出应用
-//                finish();
-//                break;
+            case R.id.ll_nav_homepage:
+                WebViewActivity.loadUrl(this, "https://github.com/hpdx/Beyond", "Beyond");
+                break;
             default:
                 break;
         }

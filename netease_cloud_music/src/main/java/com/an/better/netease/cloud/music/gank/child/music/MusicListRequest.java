@@ -6,7 +6,6 @@ import com.an.better.netease.cloud.music.api.ApiUrls;
 import com.an.better.netease.cloud.music.api.Apis;
 import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.Mix1Bean;
-import com.an.better.netease.cloud.music.gank.child.music.model.MovieSongs;
 import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.TingBlock;
 import com.trident.beyond.model.BaseListRequest;
@@ -67,13 +66,13 @@ public class MusicListRequest extends BaseListRequest<TingBlock, Section<Integer
             }
         }
 
-        // 影视歌曲
-        if(response.result.recsong != null) {
-            List<MovieSongs> movieSongsList = response.result.recsong.result;
-            if(movieSongsList != null && movieSongsList.size() > 0) {
-                cellMapping.add(new Section<>(MusicListRequest.VIEW_TYPE_MOVIE_SONGS, movieSongsList));
-            }
-        }
+//        // 影视歌曲
+//        if(response.result.recsong != null) {
+//            List<MovieSongs> movieSongsList = response.result.recsong.result;
+//            if(movieSongsList != null && movieSongsList.size() > 0) {
+//                cellMapping.add(new Section<>(MusicListRequest.VIEW_TYPE_MOVIE_SONGS, movieSongsList));
+//            }
+//        }
 
         return cellMapping;
     }

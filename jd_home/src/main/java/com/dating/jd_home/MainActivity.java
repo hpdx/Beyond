@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private void switchTab(int index) {
         if (mCurrentTabIndex != index) {
             mFragmentManager.beginTransaction()
-                    .replace(R.id.main_container, mFragments[mCurrentTabIndex])
+                    .replace(R.id.main_container, mFragments[index])
                     .commitAllowingStateLoss();
             mCurrentTabIndex = index;
         }
@@ -73,10 +73,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
                 .setHideOnSelect(false);
 
         mBottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
-        //bottomNavigationBar.setMode(BottomNavigationBar.MODE_SHIFTING);
         mBottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
-        //bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE);
-        //bottomNavigationBar.setAutoHideEnabled(true);
+        mBottomNavigationBar.setAutoHideEnabled(true);
 
         mBottomNavigationBar
                 .addItem(new BottomNavigationItem(R.drawable.axh, "")

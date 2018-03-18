@@ -13,7 +13,7 @@ import com.an.better.netease.cloud.music.gank.child.welfare.WelfareListView;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfarePagingListRequest;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareViewModel;
 import com.anbetter.log.MLog;
-import com.facebook.fresco.helper.photoview.PictureBrowse;
+import com.facebook.fresco.helper.photoview.PhotoX;
 import com.trident.beyond.adapter.BaseListAdapter;
 import com.trident.beyond.fragment.BasePagingListFragment;
 import com.trident.beyond.listener.OnItemClickListener;
@@ -68,7 +68,7 @@ public class WelfareFragment extends BasePagingListFragment<WelfarePagingListReq
 
     @Override
     public void onItemClick(View view, GanKInfo data, int position) {
-        PictureBrowse.newBuilder(mContext)
+        PhotoX.with(mContext)
                 .setPhotoStringList(mList.getPhotos())
                 .setCurrentPosition(position)
                 .start();

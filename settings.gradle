@@ -1,4 +1,8 @@
 include ':app',
+        ':lib_bottomnavigation',
+        ':jd_common',
+        ':jd_home',
+        ':jd_test',
         ':netease_cloud_music',
         ':libbasic',
         ':beyond',

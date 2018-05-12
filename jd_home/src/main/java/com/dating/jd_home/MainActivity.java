@@ -13,6 +13,7 @@ import com.anbetter.bottomnavigation.BottomNavigationBar;
 import com.anbetter.bottomnavigation.BottomNavigationItem;
 import com.anbetter.log.MLog;
 import com.dating.jd_common.TestParcelable;
+import com.dating.jd_home.home.HomeFragment;
 import com.dating.jd_home.utils.Uris;
 
 import butterknife.BindView;

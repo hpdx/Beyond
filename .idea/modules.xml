@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/jd_common/jd_common.iml" filepath="$PROJECT_DIR$/jd_common/jd_common.iml" />
       <module fileurl="file://$PROJECT_DIR$/jd_home/jd_home.iml" filepath="$PROJECT_DIR$/jd_home/jd_home.iml" />
       <module fileurl="file://$PROJECT_DIR$/jd_test/jd_test.iml" filepath="$PROJECT_DIR$/jd_test/jd_test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_basequickadapter/lib_basequickadapter.iml" filepath="$PROJECT_DIR$/lib_basequickadapter/lib_basequickadapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_bottomnavigation/lib_bottomnavigation.iml" filepath="$PROJECT_DIR$/lib_bottomnavigation/lib_bottomnavigation.iml" />
       <module fileurl="file://$PROJECT_DIR$/libbasic/libbasic.iml" filepath="$PROJECT_DIR$/libbasic/libbasic.iml" />
       <module fileurl="file://$PROJECT_DIR$/libcommon/libcommon.iml" filepath="$PROJECT_DIR$/libcommon/libcommon.iml" />

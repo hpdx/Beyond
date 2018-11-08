@@ -30,6 +30,15 @@ public class CategoryFragment extends Fragment {
         return inflater.inflate(R.layout.category_fragment, container, false);
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+
+
+
+    }
+
 
 
 }

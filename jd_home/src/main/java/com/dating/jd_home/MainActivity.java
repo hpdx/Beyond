@@ -14,7 +14,6 @@ import com.anbetter.bottomnavigation.BottomNavigationItem;
 import com.anbetter.log.MLog;
 import com.dating.jd_common.TestParcelable;
 import com.dating.jd_home.home.HomeFragment;
-import com.dating.jd_home.utils.Uris;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -145,12 +144,12 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
 //                    });
 
 
-            ARouter.getInstance()
-                    .build(Uris.PAGE_NAME_TEST_ACTIVITY)
-                    .withString("name", "zhangsan")
-                    .withInt("age", 18)
-                    .withParcelable("test", new TestParcelable("即刻约", "与帕软甲"))
-                    .navigation();
+//            ARouter.getInstance()
+//                    .build(Uris.PAGE_NAME_TEST_ACTIVITY)
+//                    .withString("name", "zhangsan")
+//                    .withInt("age", 18)
+//                    .withParcelable("test", new TestParcelable("即刻约", "与帕软甲"))
+//                    .navigation();
 
 //        } else if (v.getId() == R.id.btn_test2) {
 //            ServiceManager serviceManager = new ServiceManager();

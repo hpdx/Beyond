@@ -8,7 +8,6 @@ import com.gank.paginglist.view.GankPagingListView;
 import com.gank.paginglist.viewmodel.GankPagingListViewModel;
 import com.trident.beyond.fragment.BasePagingListFragment;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 /**
  * Created by android_ls on 2016/12/28.
@@ -41,14 +40,14 @@ public class GanKPagingListFragment extends BasePagingListFragment<GanKPagingLis
         return new GankPagingListViewModel();
     }
 
-    @Override
-    protected void addItemDecoration() {
-        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
-                .colorResId(R.color.grey_background)
-                .sizeProvider(this)
-                .showLastDivider()
-                .build());
-    }
+//    @Override
+//    protected void addItemDecoration() {
+//        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
+//                .colorResId(R.color.grey_background)
+//                .sizeProvider(this)
+//                .showLastDivider()
+//                .build());
+//    }
 
     @Override
     public int dividerSize(int position, RecyclerView parent) {

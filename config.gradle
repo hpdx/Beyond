@@ -1,11 +1,11 @@
 ext {
     minSdk = 18
     targetSdk = 22
-    buildToolsVersion = '26.0.2'
-    compileSdkVersion = 26
+    buildToolsVersion = '27.0.3'
+    compileSdkVersion = 27
 
     // Libraries Version Code
-    supportLibVersion = '26.0.2'
+    supportLibVersion = '27.1.1'
     support4Version = supportLibVersion
     appcompat7Version = supportLibVersion
     recyclerviewVersion = supportLibVersion

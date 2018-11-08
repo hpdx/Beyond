@@ -9,9 +9,6 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.dating.jd_common.TestParcelable;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 @Route(path = "/test/Test2Activity")
 public class Test2Activity extends AppCompatActivity {
 
@@ -24,7 +21,7 @@ public class Test2Activity extends AppCompatActivity {
     @Autowired
     TestParcelable test;
 
-    @BindView(R2.id.tv_text2)
+//    @BindView(R.id.tv_text2)
     TextView tvTest;
 
     @Override
@@ -32,9 +29,9 @@ public class Test2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test2);
 
-        ButterKnife.bind(this);
         ARouter.getInstance().inject(this);
 
+        tvTest = findViewById(R.id.tv_text2);
         tvTest.setText("name:" + name +",age:" + age  + ",test:"+test);
 
     }

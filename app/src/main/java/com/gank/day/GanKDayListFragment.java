@@ -7,10 +7,9 @@ import com.gank.day.model.GanKDayCategory;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.day.view.GanKDayView;
 import com.gank.day.viewmodel.GanKDayListViewModel;
-import com.trident.beyond.model.IModel;
 import com.trident.beyond.fragment.BaseListFragment;
+import com.trident.beyond.model.IModel;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 public class GanKDayListFragment extends BaseListFragment<GanKDayRequest, GanKDayView, GanKDayListViewModel> implements GanKDayView, FlexibleDividerDecoration.SizeProvider {
 
@@ -36,14 +35,14 @@ public class GanKDayListFragment extends BaseListFragment<GanKDayRequest, GanKDa
         return new GanKDayListViewModel();
     }
 
-    @Override
-    protected void addItemDecoration() {
-        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
-                .colorResId(R.color.grey_background)
-                .sizeProvider(this)
-                .showLastDivider()
-                .build());
-    }
+//    @Override
+//    protected void addItemDecoration() {
+//        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
+//                .colorResId(R.color.grey_background)
+//                .sizeProvider(this)
+//                .showLastDivider()
+//                .build());
+//    }
 
     @Override
     public int dividerSize(int position, RecyclerView parent) {
@@ -57,13 +56,13 @@ public class GanKDayListFragment extends BaseListFragment<GanKDayRequest, GanKDa
         return mContext.getResources().getDimensionPixelSize(R.dimen.horizontal_divider_height);
     }
 
-    @Override
-    protected void setRefreshEnabled() {
-        // 禁用掉下拉刷新功能
-        if (mPtrFrameLayout != null) {
-            mPtrFrameLayout.setEnabled(false);
-        }
-    }
+//    @Override
+//    protected void setRefreshEnabled() {
+//        // 禁用掉下拉刷新功能
+//        if (mPtrFrameLayout != null) {
+//            mPtrFrameLayout.setEnabled(false);
+//        }
+//    }
 
 }
 

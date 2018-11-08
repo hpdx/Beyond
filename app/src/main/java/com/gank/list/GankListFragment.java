@@ -8,7 +8,6 @@ import com.gank.list.view.GankListView;
 import com.gank.list.viewmodel.GankListViewModel;
 import com.trident.beyond.fragment.BaseListFragment;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 /**
  * Created by android_ls on 2016/12/28.
@@ -41,14 +40,14 @@ public class GankListFragment extends BaseListFragment<GanKListRequest, GankList
         return new GankListViewModel();
     }
 
-    @Override
-    protected void addItemDecoration() {
-        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
-                .colorResId(R.color.grey_background)
-                .sizeProvider(this)
-                .showLastDivider()
-                .build());
-    }
+//    @Override
+//    protected void addItemDecoration() {
+//        mRecyclerView.addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext())
+//                .colorResId(R.color.grey_background)
+//                .sizeProvider(this)
+//                .showLastDivider()
+//                .build());
+//    }
 
     @Override
     public int dividerSize(int position, RecyclerView parent) {

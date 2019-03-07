@@ -8,11 +8,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.tab.BaseTab;
 import com.anbetter.log.MLog;
 import com.gank.App;
 import com.gank.R;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.tab.BaseTab;
 
 /**
  * Created by android_ls on 2017/1/3.
@@ -22,7 +22,7 @@ public class WebTab extends BaseTab {
 
     private TabData mTabData;
     public WebTab(Context context, TabData tabData) {
-        super(context);
+        super(context, tabData);
         this.mTabData = tabData;
     }
 
@@ -34,8 +34,8 @@ public class WebTab extends BaseTab {
     @Override
     public void onActivityCreated() {
         String url = "https://www.baidu.com";
-        if(mTabData != null && mTabData.data != null) {
-            url = mTabData.data.getString("url");
+        if(mTabData != null && mTabData.param != null) {
+            url = mTabData.param.getString("url");
         }
         MLog.i("url = " + url);
 

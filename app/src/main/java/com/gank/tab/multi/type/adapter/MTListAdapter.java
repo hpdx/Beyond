@@ -3,11 +3,10 @@ package com.gank.tab.multi.type.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.anbetter.beyond.adapter.BaseListAdapter;
 import com.gank.common.model.GanKCellModel;
 import com.gank.list.model.GanKListRequest;
 import com.gank.tab.multi.type.viewholder.MTGanKViewHolder;
-import com.trident.beyond.adapter.BaseListAdapter;
-
 
 /**
  * Created by android_ls on 2017/1/3.

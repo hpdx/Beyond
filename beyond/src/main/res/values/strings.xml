@@ -1,4 +1,4 @@
 <resources>
-    <string name="loaded_all">别拉了，已经到底了</string>
-
+    <string name="loaded_all">没有更多了</string>
+    <string name="uploading">上传中...</string>
 </resources>

@@ -3,7 +3,7 @@ package com.an.better.netease.cloud.music.gank.child.everyday.viewholder;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayTitleBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCategory;
 import com.an.better.netease.cloud.music.utils.CommonUtils;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 
 /**
  *

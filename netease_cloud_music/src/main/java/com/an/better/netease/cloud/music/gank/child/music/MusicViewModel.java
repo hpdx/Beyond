@@ -1,6 +1,6 @@
 package com.an.better.netease.cloud.music.gank.child.music;
 
-import com.trident.beyond.viewmodel.BaseListViewModel;
+import com.anbetter.beyond.viewmodel.BaseListViewModel;
 
 /**
  * Created by android_ls on 2018/2/11.

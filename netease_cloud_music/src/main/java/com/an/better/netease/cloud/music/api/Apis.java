@@ -7,9 +7,9 @@ import com.an.better.netease.cloud.music.douban.model.MovieDetailInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBlock;
 import com.an.better.netease.cloud.music.gank.child.music.model.TingBlock;
 import com.an.better.netease.cloud.music.gank.child.welfare.GankDataBlock;
-import com.trident.dating.libcommon.IRequest;
-import com.trident.dating.libcommon.listener.ResponseListener;
-import com.trident.dating.libnetwork.okhttp.OKHttpRequest;
+import com.anbetter.beyond.listener.ResponseListener;
+import com.anbetter.beyond.model.IRequest;
+import com.anbetter.beyond.network.OKHttpRequest;
 
 /**
  *

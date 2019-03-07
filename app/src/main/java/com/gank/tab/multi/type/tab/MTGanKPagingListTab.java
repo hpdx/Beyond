@@ -3,14 +3,14 @@ package com.gank.tab.multi.type.tab;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.tab.BasePagingListTab;
+import com.anbetter.beyond.view.BasePagingListView;
 import com.gank.R;
 import com.gank.tab.multi.type.adapter.MTPagingListAdapter;
 import com.gank.tab.multi.type.model.MTGanKPagingListRequest;
 import com.gank.tab.multi.type.viewmodel.MTGankPagingListViewModel;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.tab.BasePagingListTab;
-import com.trident.beyond.view.BasePagingListView;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 

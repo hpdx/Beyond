@@ -1,8 +1,8 @@
 package com.gank.tab.multi.type.viewmodel;
 
+import com.anbetter.beyond.view.BasePagingListView;
+import com.anbetter.beyond.viewmodel.BasePagingListViewModel;
 import com.gank.tab.multi.type.model.MTGanKPagingListRequest;
-import com.trident.beyond.view.BasePagingListView;
-import com.trident.beyond.viewmodel.BasePagingListViewModel;
 
 /**
  * Created by android_ls on 2016/12/28.

@@ -5,8 +5,8 @@ import android.net.Uri;
 import com.an.better.netease.cloud.music.api.ApiUrls;
 import com.an.better.netease.cloud.music.api.Apis;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
-import com.trident.beyond.model.BasePaginatedListRequest;
-import com.trident.dating.libcommon.IRequest;
+import com.anbetter.beyond.model.BasePaginatedListRequest;
+import com.anbetter.beyond.model.IRequest;
 
 import java.util.ArrayList;
 import java.util.List;

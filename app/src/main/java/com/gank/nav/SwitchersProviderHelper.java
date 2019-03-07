@@ -1,5 +1,6 @@
 package com.gank.nav;
 
+import com.anbetter.beyond.router.SwitchersProvider;
 import com.gank.nav.switchers.BlankSwitcher;
 import com.gank.nav.switchers.GanKMultiTypeTabSwitcher;
 import com.gank.nav.switchers.GanKTabListSwitcher;
@@ -8,7 +9,6 @@ import com.gank.nav.switchers.GankDaySwitcher;
 import com.gank.nav.switchers.GankListSwitcher;
 import com.gank.nav.switchers.GankPagingListSwitcher;
 import com.gank.nav.switchers.WebSwitcher;
-import com.trident.better.router.SwitchersProvider;
 
 /**
  * Created by android_ls on 2016/12/26.

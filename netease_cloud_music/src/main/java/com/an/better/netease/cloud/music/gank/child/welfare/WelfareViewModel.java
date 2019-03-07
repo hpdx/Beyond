@@ -1,6 +1,6 @@
 package com.an.better.netease.cloud.music.gank.child.welfare;
 
-import com.trident.beyond.viewmodel.BasePagingListViewModel;
+import com.anbetter.beyond.viewmodel.BasePagingListViewModel;
 
 /**
  * Created by android_ls on 2018/2/23.

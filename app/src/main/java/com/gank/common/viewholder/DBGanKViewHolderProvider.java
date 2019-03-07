@@ -4,10 +4,10 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.anbetter.beyond.helper.ViewHolderProvider;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 import com.gank.common.model.GanKCellModel;
 import com.gank.databinding.VdbGankItemBinding;
-import com.trident.beyond.list.helper.ViewHolderProvider;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 
 /**

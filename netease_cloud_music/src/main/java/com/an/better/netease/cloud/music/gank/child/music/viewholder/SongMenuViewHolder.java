@@ -6,7 +6,7 @@ import com.an.better.netease.cloud.music.databinding.FirstPublishBlockBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.music.adapter.SongMenuAdapter;
 import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 
 import java.util.List;
 

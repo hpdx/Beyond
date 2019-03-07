@@ -2,14 +2,14 @@ package com.gank.paginglist.model;
 
 import android.net.Uri;
 
+import com.anbetter.beyond.model.BasePaginatedListRequest;
+import com.anbetter.beyond.model.IRequest;
 import com.anbetter.log.MLog;
 import com.gank.common.model.GanKBlock;
 import com.gank.common.model.GanKCellModel;
 import com.gank.common.model.GanKInfo;
-import com.gank.network.ApiUrls;
-import com.gank.network.Apis;
-import com.trident.beyond.model.BasePaginatedListRequest;
-import com.trident.dating.libcommon.IRequest;
+import com.gank.ApiUrls;
+import com.gank.Apis;
 
 import java.util.ArrayList;
 import java.util.List;

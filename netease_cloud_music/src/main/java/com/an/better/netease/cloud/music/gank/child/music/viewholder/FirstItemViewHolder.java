@@ -2,7 +2,7 @@ package com.an.better.netease.cloud.music.gank.child.music.viewholder;
 
 import com.an.better.netease.cloud.music.databinding.FirstPublishItemBinding;
 import com.an.better.netease.cloud.music.gank.child.music.model.ResultBean;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 
 /**
  *

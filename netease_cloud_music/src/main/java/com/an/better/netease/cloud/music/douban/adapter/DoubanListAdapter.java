@@ -10,9 +10,9 @@ import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
 import com.an.better.netease.cloud.music.douban.viewholder.HeaderViewHolder;
 import com.an.better.netease.cloud.music.douban.viewholder.MovieViewHolder;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.model.IModel;
 
 /**
  *

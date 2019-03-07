@@ -1,6 +1,6 @@
 package com.an.better.netease.cloud.music.douban.model;
 
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2018/3/2.

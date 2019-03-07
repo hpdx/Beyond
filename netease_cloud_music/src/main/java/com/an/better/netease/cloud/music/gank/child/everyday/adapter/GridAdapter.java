@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayGridItemBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.GridItemViewHolder;
-import com.trident.beyond.adapter.BaseAdapter;
+import com.anbetter.beyond.adapter.BaseAdapter;
 
 import java.util.List;
 

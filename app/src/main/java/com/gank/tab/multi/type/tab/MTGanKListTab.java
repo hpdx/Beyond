@@ -2,13 +2,13 @@ package com.gank.tab.multi.type.tab;
 
 import android.content.Context;
 
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.tab.BaseListTab;
 import com.gank.list.model.GanKListRequest;
 import com.gank.list.view.GankListView;
 import com.gank.list.viewmodel.GankListViewModel;
 import com.gank.tab.multi.type.adapter.MTListAdapter;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.tab.BaseListTab;
 
 /**
  * Created by android_ls on 2017/1/3.

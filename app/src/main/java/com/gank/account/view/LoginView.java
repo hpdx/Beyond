@@ -1,8 +1,8 @@
 package com.gank.account.view;
 
 
+import com.anbetter.beyond.mvvm.MvvmBaseView;
 import com.gank.account.model.UserInfo;
-import com.trident.beyond.mvvm.MvvmBaseView;
 
 public interface LoginView extends MvvmBaseView<UserInfo> {
 

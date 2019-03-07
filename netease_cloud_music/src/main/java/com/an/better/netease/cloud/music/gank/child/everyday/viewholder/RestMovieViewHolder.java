@@ -5,8 +5,8 @@ import android.view.View;
 import com.an.better.netease.cloud.music.databinding.ItemEverydayOneBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 import com.bumptech.glide.Glide;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 import java.util.ArrayList;
 

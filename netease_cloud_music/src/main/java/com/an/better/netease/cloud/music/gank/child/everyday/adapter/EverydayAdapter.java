@@ -12,13 +12,13 @@ import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEvent
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayBanner;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCategory;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
-import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.GridViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.HomeBannerViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.OneViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.RestMovieViewHolder;
 import com.an.better.netease.cloud.music.gank.child.everyday.viewholder.TitleViewHolder;
-import com.trident.beyond.adapter.BaseListAdapter;
+import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
+import com.anbetter.beyond.adapter.BaseListAdapter;
 
 import java.util.ArrayList;
 

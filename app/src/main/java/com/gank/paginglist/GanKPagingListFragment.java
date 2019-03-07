@@ -2,11 +2,11 @@ package com.gank.paginglist;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.anbetter.beyond.fragment.BasePagingListFragment;
 import com.gank.R;
 import com.gank.paginglist.model.GanKPagingListRequest;
 import com.gank.paginglist.view.GankPagingListView;
 import com.gank.paginglist.viewmodel.GankPagingListViewModel;
-import com.trident.beyond.fragment.BasePagingListFragment;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
 
 /**

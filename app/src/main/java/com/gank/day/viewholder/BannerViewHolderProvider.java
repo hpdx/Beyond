@@ -4,11 +4,10 @@ import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.anbetter.beyond.helper.ViewHolderProvider;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 import com.gank.databinding.VdbGankDayBannerItemBinding;
 import com.gank.day.model.GanKDayBanner;
-import com.trident.beyond.list.helper.ViewHolderProvider;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
-
 
 public class BannerViewHolderProvider extends ViewHolderProvider<GanKDayBanner,
         BannerViewHolderProvider.GanKDayViewHolder> {

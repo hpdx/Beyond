@@ -1,8 +1,8 @@
 package com.gank.paginglist.viewmodel;
 
+import com.anbetter.beyond.viewmodel.BasePagingListViewModel;
 import com.gank.paginglist.model.GanKPagingListRequest;
 import com.gank.paginglist.view.GankPagingListView;
-import com.trident.beyond.viewmodel.BasePagingListViewModel;
 
 /**
  * Created by android_ls on 2016/12/28.

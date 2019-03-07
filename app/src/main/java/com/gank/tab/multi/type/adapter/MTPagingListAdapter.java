@@ -3,14 +3,14 @@ package com.gank.tab.multi.type.adapter;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.anbetter.beyond.adapter.BaseListPagingAdapter;
+import com.anbetter.beyond.model.IModel;
 import com.gank.common.model.GanKCellModel;
 import com.gank.databinding.VdbGankDayBannerItemBinding;
 import com.gank.day.model.GanKDayBanner;
 import com.gank.tab.multi.type.model.MTGanKPagingListRequest;
 import com.gank.tab.multi.type.viewholder.MTGanKDayViewHolder;
 import com.gank.tab.multi.type.viewholder.MTGanKViewHolder;
-import com.trident.beyond.adapter.BaseListPagingAdapter;
-import com.trident.beyond.model.IModel;
 
 
 /**

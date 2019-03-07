@@ -5,12 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
+import com.anbetter.beyond.host.BinderFragment;
+import com.anbetter.beyond.router.interfaces.INavigation;
 import com.anbetter.log.MLog;
 import com.gank.R;
 import com.gank.base.BaseFragmentActivity;
 import com.gank.utils.MainThreadStack;
-import com.trident.better.router.interfaces.INavigation;
-import com.trident.beyond.host.BinderFragment;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;

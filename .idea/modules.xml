@@ -4,18 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GanK.iml" filepath="$PROJECT_DIR$/GanK.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/better/better.iml" filepath="$PROJECT_DIR$/better/better.iml" />
       <module fileurl="file://$PROJECT_DIR$/beyond/beyond.iml" filepath="$PROJECT_DIR$/beyond/beyond.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jd_common/jd_common.iml" filepath="$PROJECT_DIR$/jd_common/jd_common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jd_home/jd_home.iml" filepath="$PROJECT_DIR$/jd_home/jd_home.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jd_test/jd_test.iml" filepath="$PROJECT_DIR$/jd_test/jd_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lib_basequickadapter/lib_basequickadapter.iml" filepath="$PROJECT_DIR$/lib_basequickadapter/lib_basequickadapter.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib_bottomnavigation/lib_bottomnavigation.iml" filepath="$PROJECT_DIR$/lib_bottomnavigation/lib_bottomnavigation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libbasic/libbasic.iml" filepath="$PROJECT_DIR$/libbasic/libbasic.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libcommon/libcommon.iml" filepath="$PROJECT_DIR$/libcommon/libcommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/libnetwork/libnetwork.iml" filepath="$PROJECT_DIR$/libnetwork/libnetwork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib_rxbus/lib_rxbus.iml" filepath="$PROJECT_DIR$/lib_rxbus/lib_rxbus.iml" />
       <module fileurl="file://$PROJECT_DIR$/netease_cloud_music/netease_cloud_music.iml" filepath="$PROJECT_DIR$/netease_cloud_music/netease_cloud_music.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rxbus/rxbus.iml" filepath="$PROJECT_DIR$/rxbus/rxbus.iml" />
     </modules>
   </component>
 </project>

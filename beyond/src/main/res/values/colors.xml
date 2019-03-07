@@ -8,10 +8,12 @@
     <color name="app_background_color">#F9F9F9</color>
     <color name="white_transparent">#96ffffff</color>
     <color name="home_tab_background">#40ffffff</color>
-    <!-- 透明度为40%的黑色-->
-    <color name="black_transparent">#66000000</color>
+
     <!-- 透明度为60%的黑色-->
+    <color name="black_transparent">#66000000</color>
+    <!-- 透明度为40%的黑色-->
     <color name="black_transparent_60">#99000000</color>
+
     <color name="bolo_white_transparent">#e5ffffff</color>
     <color name="talk_room_bck">#75ffffff</color>
     <color name="bolo_green_transparent">#80009b74</color>
@@ -61,7 +63,7 @@
     <color name="darkgrey_transparent">#96959595</color>
     <color name="grey">#999999</color>
     <color name="light_grey">#bfbfbf</color>
-    <color name="white_background">#ffffffff</color>
+    <color name="white_background">#ffffff</color>
     <color name="grey_background">#eeeeee</color>
     <color name="white_text">#ffffffff</color>
     <color name="transparent">#00000000</color>
@@ -98,4 +100,27 @@
     <color name="black_66000000">#0d000000</color>
     <color name="red_eb5c60">#EB5C60</color>
     <drawable name="black_66181830">#7F181830</drawable>
+
+    <color name="gray_dcdcdc">#DCDCDC</color>
+    <color name="gray_969696">#969696</color>
+    <color name="blue_18609c">#18609c</color>
+    <color name="black_464646">#464646</color>
+    <color name="black_454545">#454545</color>
+    <color name="tab_gray_fff">#8cffffff</color>
+    <color name="grey_DDDDDD">#dddddd</color>
+    <color name="black_181830">#181830</color>
+    <color name="grey_52526c">#52526c</color>
+
+    <color name="red">#FFC93437</color>
+    <color name="blue">#FF375BF1</color>
+    <color name="yellow">#FFF7D23E</color>
+    <color name="green">#FF34A350</color>
+
+    <integer-array name="google_colors">
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+    </integer-array>
+
 </resources>

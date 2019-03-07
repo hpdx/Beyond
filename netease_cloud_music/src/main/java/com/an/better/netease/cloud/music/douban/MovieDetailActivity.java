@@ -38,6 +38,8 @@ import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
 import com.an.better.netease.cloud.music.utils.CommonUtils;
 import com.an.better.netease.cloud.music.utils.Utils;
 import com.an.better.netease.cloud.music.webview.WebViewActivity;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.listener.ResponseListener;
 import com.anbetter.log.MLog;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
@@ -45,8 +47,6 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.Target;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.dating.libcommon.listener.ResponseListener;
 
 import java.util.ArrayList;
 
@@ -300,6 +300,11 @@ public class MovieDetailActivity extends AppCompatActivity implements OnItemClic
     @Override
     public void onItemClick(View view, CastsBean data, int position) {
         WebViewActivity.loadUrl(MovieDetailActivity.this, data.alt, "加载中...");
+    }
+
+    @Override
+    public void onItemClick(View view, CastsBean data, int position, int code) {
+
     }
 
     private void showLoading() {

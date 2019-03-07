@@ -1,6 +1,6 @@
 package com.an.better.netease.cloud.music.gank.child.music.model;
 
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.model.IModel;
 
 import java.util.List;
 

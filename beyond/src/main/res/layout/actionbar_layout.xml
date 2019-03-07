@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height"
+    android:background="@drawable/actionbar_bg"
+    android:minHeight="@dimen/action_bar_height">
+
+    <FrameLayout
+        android:id="@+id/actionbar_back"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingLeft="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/actionbar_left"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="12dp"
+        android:textColor="#ff474747"
+        android:textSize="@dimen/font_15_sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/bolo_black"
+        android:textSize="@dimen/font_xlarge" />
+
+    <TextView
+        android:id="@+id/actionbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical|right"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:textColor="#ff474747"
+        android:textSize="@dimen/font_15_sp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/actionbar_right_image"
+        android:layout_width="60dp"
+        android:layout_height="44dp"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingRight="17dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#DCDCDC"
+        android:visibility="gone" />
+</RelativeLayout>

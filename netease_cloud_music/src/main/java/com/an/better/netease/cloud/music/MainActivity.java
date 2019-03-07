@@ -19,7 +19,7 @@ import com.an.better.netease.cloud.music.douban.hot.DoubanFragment;
 import com.an.better.netease.cloud.music.gank.GankFragment;
 import com.an.better.netease.cloud.music.statusbar.StatusBarUtils;
 import com.an.better.netease.cloud.music.webview.WebViewActivity;
-import com.trident.beyond.adapter.FragmentAdapter;
+import com.anbetter.beyond.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
 

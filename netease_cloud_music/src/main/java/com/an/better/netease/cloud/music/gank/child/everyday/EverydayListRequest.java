@@ -11,10 +11,10 @@ import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayCatego
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKDayInfo;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.an.better.netease.cloud.music.utils.Utils;
+import com.anbetter.beyond.model.BaseListRequest;
+import com.anbetter.beyond.model.IRequest;
+import com.anbetter.beyond.model.Section;
 import com.anbetter.log.MLog;
-import com.trident.beyond.model.BaseListRequest;
-import com.trident.beyond.model.Section;
-import com.trident.dating.libcommon.IRequest;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -13,8 +13,8 @@ import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.gank.child.EverydayFragment;
 import com.an.better.netease.cloud.music.gank.child.MusicHomeFragment;
 import com.an.better.netease.cloud.music.gank.child.WelfareFragment;
+import com.anbetter.beyond.adapter.FragmentAdapter;
 import com.anbetter.log.MLog;
-import com.trident.beyond.adapter.FragmentAdapter;
 
 import java.util.ArrayList;
 

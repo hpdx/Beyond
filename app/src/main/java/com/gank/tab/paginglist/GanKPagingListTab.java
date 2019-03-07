@@ -2,11 +2,11 @@ package com.gank.tab.paginglist;
 
 import android.content.Context;
 
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.tab.BasePagingListTab;
 import com.gank.paginglist.model.GanKPagingListRequest;
 import com.gank.paginglist.view.GankPagingListView;
 import com.gank.paginglist.viewmodel.GankPagingListViewModel;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.tab.BasePagingListTab;
 
 /**
  * Created by android_ls on 2017/1/3.

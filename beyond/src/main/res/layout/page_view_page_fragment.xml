@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.anbetter.beyond.widgets.viewpagertab.NavTabContainer
+        android:id="@+id/pager_tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/actionbar_bg"
+        android:fadingEdgeLength="0.0dip"
+        android:fillViewport="true"
+        android:visibility="gone">
+
+        <com.anbetter.beyond.widgets.viewpagertab.NavTabStrip
+            android:id="@+id/pager_tab_strip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:show_full_underline="false"
+            app:show_side_separator="false"
+            app:tab_strip_title_padding="3dp"/>
+
+    </com.anbetter.beyond.widgets.viewpagertab.NavTabContainer>
+
+    <com.anbetter.beyond.widgets.MViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

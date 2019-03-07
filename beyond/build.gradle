@@ -24,14 +24,22 @@ android {
 }
 
 dependencies {
-    compile project(path: ':libcommon')
-    compile project(path: ':rxbus')
+    api project(path: ':lib_rxbus')
 
-    compile rootProject.ext.dependencies["support-v4"]
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile rootProject.ext.dependencies["MLog"]
-    compile rootProject.ext.dependencies["gson"]
-    compile rootProject.ext.dependencies["smoothprogressbar"]
-    compile rootProject.ext.dependencies["ptr_pullrefresh"]
+    api rootProject.ext.dependencies["support-v4"]
+    api rootProject.ext.dependencies["appcompat-v7"]
+    api rootProject.ext.dependencies["recyclerview-v7"]
+    api rootProject.ext.dependencies["design"]
+    api rootProject.ext.dependencies["constraint-layout"]
+
+    api rootProject.ext.dependencies["smoothprogressbar"]
+    api rootProject.ext.dependencies["ptr_pullrefresh"]
+
+    api rootProject.ext.dependencies["okhttp"]
+    api rootProject.ext.dependencies["gson"]
+    api rootProject.ext.dependencies["fresco-helper"]
+
+    api 'com.github.HotBitmapGG:RingProgressBar:V1.2.3'
+    api 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
 }

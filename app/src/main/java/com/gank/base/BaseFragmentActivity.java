@@ -6,19 +6,18 @@ import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.anbetter.beyond.BaseActivity;
+import com.anbetter.beyond.host.BinderFragment;
+import com.anbetter.beyond.host.PageFragmentHost;
+import com.anbetter.beyond.router.Router;
+import com.anbetter.beyond.router.interceptor.LogInterceptor;
 import com.anbetter.log.MLog;
 import com.gank.BuildConfig;
 import com.gank.actionbar.ActionBarHelper;
 import com.gank.nav.navigation.NavigationManager;
-import com.trident.better.router.Router;
-import com.trident.better.router.interceptor.LogInterceptor;
-import com.trident.beyond.host.BinderFragment;
-import com.trident.beyond.host.PageFragmentHost;
-
 
 /**
  * 应用程序主Activity
@@ -29,7 +28,7 @@ import com.trident.beyond.host.PageFragmentHost;
  * 4、提供设置ActionBar上标题的方法
  * 5、提供设置ActionBar上返回按钮是否显示的方法
  */
-public abstract class BaseFragmentActivity extends AppCompatActivity implements PageFragmentHost,
+public abstract class BaseFragmentActivity extends BaseActivity implements PageFragmentHost,
         FragmentManager.OnBackStackChangedListener {
 
     private static final String TAG = "BaseFragmentActivity";

@@ -4,8 +4,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.databinding.ItemWelfareBinding;
-import com.trident.beyond.adapter.BaseListPagingAdapter;
-import com.trident.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.adapter.BaseListPagingAdapter;
+import com.anbetter.beyond.listener.OnItemClickListener;
 
 /**
  *

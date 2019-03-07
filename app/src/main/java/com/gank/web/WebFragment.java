@@ -9,10 +9,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.anbetter.beyond.fragment.BasePageFragment;
 import com.anbetter.log.MLog;
 import com.gank.App;
 import com.gank.R;
-import com.trident.beyond.fragment.BasePageFragment;
 
 /**
  *

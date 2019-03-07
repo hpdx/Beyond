@@ -7,9 +7,9 @@ import com.an.better.netease.cloud.music.gank.child.music.MusicHomeAdapter;
 import com.an.better.netease.cloud.music.gank.child.music.MusicListRequest;
 import com.an.better.netease.cloud.music.gank.child.music.MusicListView;
 import com.an.better.netease.cloud.music.gank.child.music.MusicViewModel;
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.fragment.BaseListFragment;
 import com.anbetter.log.MLog;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.fragment.BaseListFragment;
 
 /**
  * 百度音乐首页

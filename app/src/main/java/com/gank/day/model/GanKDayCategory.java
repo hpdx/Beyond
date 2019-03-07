@@ -1,7 +1,6 @@
 package com.gank.day.model;
 
-
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2016/12/29.

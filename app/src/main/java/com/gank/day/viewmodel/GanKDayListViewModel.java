@@ -1,8 +1,8 @@
 package com.gank.day.viewmodel;
 
+import com.anbetter.beyond.viewmodel.BaseListViewModel;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.day.view.GanKDayView;
-import com.trident.beyond.viewmodel.BaseListViewModel;
 
 public class GanKDayListViewModel extends BaseListViewModel<GanKDayRequest, GanKDayView> {
 

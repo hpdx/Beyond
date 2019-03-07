@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 
 import com.an.better.netease.cloud.music.databinding.ItemMovieDetailBinding;
 import com.an.better.netease.cloud.music.douban.model.CastsBean;
-import com.trident.beyond.adapter.BaseAdapter;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.adapter.BaseAdapter;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 
 import java.util.List;
 

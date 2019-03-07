@@ -13,12 +13,45 @@
         <attr name="matProg_linearProgress" format="boolean" />
     </declare-styleable>
 
-    <declare-styleable name="VPTabStrip">
+    <declare-styleable name="NavTabStrip">
         <attr name="show_side_separator" format="boolean" />
         <attr name="show_full_underline" format="boolean" />
         <attr name="selected_underline_bottom" format="dimension" />
         <attr name="tab_strip_title_padding" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="RecyclerViewPager">
+        <attr name="rvp_triggerOffset" format="float" />
+        <attr name="rvp_flingFactor" format="float" />
+        <attr name="rvp_singlePageFling" format="boolean" />
+        <attr name="rvp_inertia" format="boolean" />
+        <attr name="rvp_millisecondsPerInch" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="TagLabel">
+        <attr name="textColor" format="color" />
+        <attr name="textSelectedColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="paddingVertical" format="dimension" />
+        <attr name="paddingHorizontal" format="dimension" />
+        <attr name="itemMargin" format="dimension" />
+        <attr name="deleteButton" format="boolean" />
+
+        <attr name="deleteButtonImage" format="reference" />
+        <attr name="labelBackground" format="reference" />
+
+        <attr name="selectMode" format="boolean" />
+        <attr name="selectBackground" format="reference" />
+        <attr name="maxSelectNum" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer"></attr>
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
 
 </resources>

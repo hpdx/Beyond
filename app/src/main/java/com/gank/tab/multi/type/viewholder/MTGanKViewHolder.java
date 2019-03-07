@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.anbetter.beyond.viewholder.BaseViewHolder;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.facebook.fresco.helper.Phoenix;
 import com.gank.R;
 import com.gank.common.model.GanKCellModel;
-import com.trident.beyond.viewholder.BaseViewHolder;
 
 /**
  * Created by android_ls on 2017/1/3.

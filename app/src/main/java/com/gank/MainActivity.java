@@ -5,10 +5,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.widget.Toolbar;
 
+import com.anbetter.beyond.host.BinderFragment;
 import com.gank.actionbar.ActionBarHelper;
 import com.gank.base.BaseFragmentActivity;
 import com.gank.utils.ToastUtils;
-import com.trident.beyond.host.BinderFragment;
 
 public class MainActivity extends BaseFragmentActivity {
 
@@ -83,6 +83,11 @@ public class MainActivity extends BaseFragmentActivity {
     }
 
     @Override
+    public void toggleTabBar(boolean visible) {
+
+    }
+
+    @Override
     public void showGlobalBannerTips(String message) {
 
     }
@@ -99,6 +104,16 @@ public class MainActivity extends BaseFragmentActivity {
 
     @Override
     public void setSoftInputMode(int mode) {
+
+    }
+
+    @Override
+    public void translucentStatusBar(boolean translucent) {
+
+    }
+
+    @Override
+    public void switchDiscoverMod(boolean isVideo) {
 
     }
 

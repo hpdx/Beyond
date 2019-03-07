@@ -2,6 +2,9 @@ package com.gank.tab.multi.type.adapter;
 
 import android.content.Context;
 
+import com.anbetter.beyond.adapter.BaseViewPagerAdapter;
+import com.anbetter.beyond.host.BinderTab;
+import com.anbetter.beyond.model.TabData;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.list.model.GanKListRequest;
 import com.gank.paginglist.model.GanKPagingListRequest;
@@ -12,9 +15,6 @@ import com.gank.tab.multi.type.tab.MTGanKListTab;
 import com.gank.tab.multi.type.tab.MTGanKPagingListTab;
 import com.gank.tab.multi.type.tab.WebTab;
 import com.gank.tab.paginglist.GanKPagingListTab;
-import com.trident.beyond.adapter.BaseViewPagerAdapter;
-import com.trident.beyond.host.BinderTab;
-import com.trident.beyond.model.TabData;
 
 import java.util.List;
 

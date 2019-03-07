@@ -8,9 +8,9 @@ import com.an.better.netease.cloud.music.api.Apis;
 import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
-import com.trident.beyond.model.BaseListRequest;
-import com.trident.beyond.model.IModel;
-import com.trident.dating.libcommon.IRequest;
+import com.anbetter.beyond.model.BaseListRequest;
+import com.anbetter.beyond.model.IModel;
+import com.anbetter.beyond.model.IRequest;
 
 import java.util.ArrayList;
 import java.util.List;

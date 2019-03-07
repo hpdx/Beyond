@@ -2,13 +2,13 @@ package com.gank.day;
 
 import android.support.v7.widget.RecyclerView;
 
+import com.anbetter.beyond.fragment.BaseListFragment;
+import com.anbetter.beyond.model.IModel;
 import com.gank.R;
 import com.gank.day.model.GanKDayCategory;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.day.view.GanKDayView;
 import com.gank.day.viewmodel.GanKDayListViewModel;
-import com.trident.beyond.fragment.BaseListFragment;
-import com.trident.beyond.model.IModel;
 import com.yqritc.recyclerviewflexibledivider.FlexibleDividerDecoration;
 
 public class GanKDayListFragment extends BaseListFragment<GanKDayRequest, GanKDayView, GanKDayListViewModel> implements GanKDayView, FlexibleDividerDecoration.SizeProvider {

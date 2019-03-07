@@ -8,9 +8,9 @@ import com.an.better.netease.cloud.music.gank.child.music.model.FocusBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.Mix1Bean;
 import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
 import com.an.better.netease.cloud.music.gank.child.music.model.TingBlock;
-import com.trident.beyond.model.BaseListRequest;
-import com.trident.beyond.model.Section;
-import com.trident.dating.libcommon.IRequest;
+import com.anbetter.beyond.model.BaseListRequest;
+import com.anbetter.beyond.model.IRequest;
+import com.anbetter.beyond.model.Section;
 
 import java.util.ArrayList;
 import java.util.Collections;

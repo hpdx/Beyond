@@ -4,8 +4,8 @@ import android.view.View;
 
 import com.an.better.netease.cloud.music.databinding.ItemSongMenuBinding;
 import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 
 /**
  *

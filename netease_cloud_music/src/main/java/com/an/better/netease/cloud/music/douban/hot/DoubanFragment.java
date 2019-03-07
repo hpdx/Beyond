@@ -9,11 +9,11 @@ import com.an.better.netease.cloud.music.douban.MovieDetailActivity;
 import com.an.better.netease.cloud.music.douban.adapter.DoubanListAdapter;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.fragment.BaseListFragment;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.model.IModel;
 import com.anbetter.log.MLog;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.fragment.BaseListFragment;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.model.IModel;
 
 /**
  * Created by android_ls on 2018/1/26.
@@ -50,6 +50,11 @@ public class DoubanFragment extends BaseListFragment<DoubanListRequest, DoubanLi
         } else if(data instanceof SubjectsBean && view instanceof ImageView) {
             MovieDetailActivity.start(getActivity(), (SubjectsBean)data, (ImageView)view);
         }
+    }
+
+    @Override
+    public void onItemClick(View view, IModel data, int position, int code) {
+
     }
 
 }

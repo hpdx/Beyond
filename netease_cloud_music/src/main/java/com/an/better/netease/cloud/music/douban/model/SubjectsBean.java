@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.an.better.netease.cloud.music.utils.Utils;
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.model.IModel;
 
 import java.util.List;
 

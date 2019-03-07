@@ -12,11 +12,11 @@ import com.an.better.netease.cloud.music.gank.child.welfare.WelfareAdapter;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareListView;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfarePagingListRequest;
 import com.an.better.netease.cloud.music.gank.child.welfare.WelfareViewModel;
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.fragment.BasePagingListFragment;
+import com.anbetter.beyond.listener.OnItemClickListener;
 import com.anbetter.log.MLog;
 import com.facebook.fresco.helper.photoview.PhotoX;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.fragment.BasePagingListFragment;
-import com.trident.beyond.listener.OnItemClickListener;
 
 /**
  * 福利
@@ -72,6 +72,11 @@ public class WelfareFragment extends BasePagingListFragment<WelfarePagingListReq
                 .setPhotoStringList(mList.getPhotos())
                 .setCurrentPosition(position)
                 .start();
+    }
+
+    @Override
+    public void onItemClick(View view, GanKInfo data, int position, int code) {
+
     }
 
 }

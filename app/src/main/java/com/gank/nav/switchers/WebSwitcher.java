@@ -4,10 +4,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
+import com.anbetter.beyond.router.FragmentSwitcher;
 import com.gank.nav.SwitchersProviderHelper;
 import com.gank.web.WebFragment;
-import com.trident.better.router.FragmentSwitcher;
-
 
 /**
  *

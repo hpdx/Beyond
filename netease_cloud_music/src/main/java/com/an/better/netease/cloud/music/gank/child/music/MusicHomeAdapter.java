@@ -13,7 +13,7 @@ import com.an.better.netease.cloud.music.gank.child.music.model.SongMenuBean;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.FirstPublishViewHolder;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.MovieSongsViewHolder;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.SongMenuViewHolder;
-import com.trident.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.adapter.BaseListAdapter;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
 package com.gank.day.model;
 
+import com.anbetter.beyond.model.BaseListRequest;
+import com.anbetter.beyond.model.IModel;
+import com.anbetter.beyond.model.IRequest;
 import com.gank.common.model.GanKCellModel;
 import com.gank.common.model.GanKInfo;
-import com.gank.network.ApiUrls;
-import com.gank.network.Apis;
-import com.trident.beyond.model.IModel;
-import com.trident.beyond.model.BaseListRequest;
-import com.trident.dating.libcommon.IRequest;
+import com.gank.ApiUrls;
+import com.gank.Apis;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,11 +6,11 @@ import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.databinding.ItemWelfareBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
 import com.an.better.netease.cloud.music.utils.CommonUtils;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.facebook.fresco.helper.utils.DensityUtil;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
 
 /**
  *

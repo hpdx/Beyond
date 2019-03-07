@@ -5,9 +5,9 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
+import com.anbetter.beyond.fragment.BasePageFragment;
 import com.anbetter.log.MLog;
 import com.gank.nav.Navigator;
-import com.trident.beyond.fragment.BasePageFragment;
 
 /**
  *

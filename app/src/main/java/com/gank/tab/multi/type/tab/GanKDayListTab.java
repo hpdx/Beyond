@@ -2,11 +2,11 @@ package com.gank.tab.multi.type.tab;
 
 import android.content.Context;
 
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.tab.BaseListTab;
 import com.gank.day.model.GanKDayRequest;
 import com.gank.day.view.GanKDayView;
 import com.gank.day.viewmodel.GanKDayListViewModel;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.tab.BaseListTab;
 
 /**
  * Created by android_ls on 2017/1/3.

@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import com.an.better.netease.cloud.music.databinding.ItemMoveSongsBinding;
 import com.an.better.netease.cloud.music.gank.child.music.model.MovieSongs;
 import com.an.better.netease.cloud.music.gank.child.music.viewholder.MovieSongsItemViewHolder;
-import com.trident.beyond.adapter.BaseAdapter;
+import com.anbetter.beyond.adapter.BaseAdapter;
 
 import java.util.List;
 

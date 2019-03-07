@@ -2,6 +2,7 @@ package com.gank;
 
 import android.app.Application;
 
+import com.anbetter.beyond.network.OKHttpHelper;
 import com.anbetter.log.MLog;
 import com.facebook.fresco.helper.Phoenix;
 import com.gank.common.ViewHolderProviderHelper;
@@ -22,6 +23,7 @@ public class App extends Application {
 
         MLog.init(BuildConfig.DEBUG, "MLog");
         Phoenix.init(this);
+        OKHttpHelper.init();
         SwitchersProviderHelper.register();
         ViewHolderProviderHelper.register();
 

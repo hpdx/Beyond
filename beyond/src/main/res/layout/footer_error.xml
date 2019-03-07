@@ -45,7 +45,7 @@
         android:orientation="horizontal"
         android:visibility="gone">
 
-        <com.trident.beyond.widgets.ProgressWheel
+        <com.anbetter.beyond.widgets.ProgressWheel
             android:id="@+id/loading_progress_bar"
             android:layout_width="23dp"
             android:layout_height="23dp"

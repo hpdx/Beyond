@@ -3,11 +3,11 @@ package com.gank.account;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.anbetter.beyond.fragment.BaseVdbMvvmFragment;
 import com.gank.R;
 import com.gank.account.model.UserInfo;
 import com.gank.account.view.LoginView;
 import com.gank.account.viewmodel.LoginViewModel;
-import com.trident.beyond.fragment.BaseVdbMvvmFragment;
 
 /**
  * 登录界面

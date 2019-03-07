@@ -2,7 +2,7 @@ package com.gank.nav;
 
 import android.os.Bundle;
 
-import com.trident.better.router.Router;
+import com.anbetter.beyond.router.Router;
 
 /**
  * Created by android_ls on 2016/12/26.

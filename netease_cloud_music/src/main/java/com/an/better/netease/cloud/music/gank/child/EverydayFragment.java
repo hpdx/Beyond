@@ -8,9 +8,9 @@ import com.an.better.netease.cloud.music.gank.child.everyday.EverydayListRequest
 import com.an.better.netease.cloud.music.gank.child.everyday.EverydayListView;
 import com.an.better.netease.cloud.music.gank.child.everyday.EverydayViewModel;
 import com.an.better.netease.cloud.music.gank.child.everyday.adapter.EverydayAdapter;
+import com.anbetter.beyond.adapter.BaseListAdapter;
+import com.anbetter.beyond.fragment.BaseListFragment;
 import com.anbetter.log.MLog;
-import com.trident.beyond.adapter.BaseListAdapter;
-import com.trident.beyond.fragment.BaseListFragment;
 
 /**
  * 每日推荐
@@ -19,7 +19,7 @@ import com.trident.beyond.fragment.BaseListFragment;
  */
 
 public class EverydayFragment extends BaseListFragment<EverydayListRequest, EverydayListView,
-        EverydayViewModel>  implements EverydayListView {
+        EverydayViewModel> implements EverydayListView {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

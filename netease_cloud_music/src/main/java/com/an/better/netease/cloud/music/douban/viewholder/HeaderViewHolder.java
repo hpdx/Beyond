@@ -5,9 +5,9 @@ import android.widget.ImageView;
 
 import com.an.better.netease.cloud.music.R;
 import com.an.better.netease.cloud.music.douban.model.HotMovieTitle;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.viewholder.BaseViewHolder;
 import com.bumptech.glide.Glide;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.beyond.viewholder.BaseViewHolder;
 
 /**
  * Created by android_ls on 2018/3/2.

@@ -5,7 +5,7 @@
 
     <include layout="@layout/include_content_list" />
 
-    <com.trident.beyond.widgets.BackToTopView
+    <com.anbetter.beyond.widgets.BackToTopView
         android:id="@id/up_to_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

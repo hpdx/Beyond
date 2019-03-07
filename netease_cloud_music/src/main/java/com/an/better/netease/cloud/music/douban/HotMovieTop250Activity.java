@@ -18,11 +18,11 @@ import com.an.better.netease.cloud.music.api.Apis;
 import com.an.better.netease.cloud.music.douban.adapter.DoubanTopListAdapter;
 import com.an.better.netease.cloud.music.douban.model.HotMovieBlock;
 import com.an.better.netease.cloud.music.douban.model.SubjectsBean;
+import com.anbetter.beyond.listener.OnItemClickListener;
+import com.anbetter.beyond.listener.ResponseListener;
 import com.jcodecraeer.xrecyclerview.CustomFooterViewCallBack;
 import com.jcodecraeer.xrecyclerview.ProgressStyle;
 import com.jcodecraeer.xrecyclerview.XRecyclerView;
-import com.trident.beyond.listener.OnItemClickListener;
-import com.trident.dating.libcommon.listener.ResponseListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -122,6 +122,11 @@ public class HotMovieTop250Activity extends AppCompatActivity
         if (view instanceof ImageView) {
             MovieDetailActivity.start(this, data, (ImageView) view);
         }
+    }
+
+    @Override
+    public void onItemClick(View view, SubjectsBean data, int position, int code) {
+
     }
 
     /**

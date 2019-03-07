@@ -1,8 +1,8 @@
 package com.gank.list.viewmodel;
 
+import com.anbetter.beyond.viewmodel.BaseListViewModel;
 import com.gank.list.model.GanKListRequest;
 import com.gank.list.view.GankListView;
-import com.trident.beyond.viewmodel.BaseListViewModel;
 
 /**
  * Created by android_ls on 2016/12/28.

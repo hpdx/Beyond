@@ -3,7 +3,7 @@ package com.an.better.netease.cloud.music.gank.child.everyday.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.trident.beyond.model.IModel;
+import com.anbetter.beyond.model.IModel;
 
 import java.util.ArrayList;
 

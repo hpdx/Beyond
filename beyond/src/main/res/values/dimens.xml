@@ -23,7 +23,7 @@
     <dimen name="play_tab_strip_title_padding">12.0dip</dimen>
     <dimen name="round_tab_strip_title_padding">30.0dip</dimen>
     <dimen name="play_tab_strip_title_offset">52.0dip</dimen>
-    <dimen name="play_tab_strip_vertical_separator">24.0dip</dimen>
+    <dimen name="play_tab_strip_vertical_separator">14.0dip</dimen>
     <dimen name="play_tab_strip_text_size">14sp</dimen>
 
     <!-- 下拉刷新动画每帧持续的时长 -->

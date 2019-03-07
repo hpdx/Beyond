@@ -4,12 +4,12 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.trident.beyond.adapter.BaseViewPagerAdapter;
-import com.trident.beyond.fragment.BaseViewPagerFragment;
-import com.trident.beyond.model.BaseModel;
-import com.trident.beyond.model.TabData;
-import com.trident.beyond.view.BaseView;
-import com.trident.beyond.viewmodel.BaseViewModel;
+import com.anbetter.beyond.adapter.BaseViewPagerAdapter;
+import com.anbetter.beyond.fragment.BaseViewPagerFragment;
+import com.anbetter.beyond.model.BaseModel;
+import com.anbetter.beyond.model.TabData;
+import com.anbetter.beyond.view.BaseView;
+import com.anbetter.beyond.viewmodel.BaseViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

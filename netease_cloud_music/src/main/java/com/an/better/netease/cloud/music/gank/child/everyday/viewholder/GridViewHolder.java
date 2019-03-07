@@ -6,9 +6,9 @@ import com.an.better.netease.cloud.music.databinding.ItemEverydayGridBinding;
 import com.an.better.netease.cloud.music.gank.child.everyday.adapter.GridAdapter;
 import com.an.better.netease.cloud.music.gank.child.everyday.event.EverydayEventHandler;
 import com.an.better.netease.cloud.music.gank.child.everyday.model.GanKInfo;
+import com.anbetter.beyond.viewholder.BaseVdbViewHolder;
+import com.anbetter.beyond.widgets.decoration.GridItemDecoration;
 import com.facebook.fresco.helper.utils.DensityUtil;
-import com.trident.beyond.viewholder.BaseVdbViewHolder;
-import com.trident.beyond.widgets.decoration.GridItemDecoration;
 
 import java.util.ArrayList;
 
